@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap");
+
+html {
+  min-width: 400px;
+  background-color: #0c3052;
+  background-image: url("/assets/background.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.crimson-font {
+  font-family: "Crimson Text", serif !important;
+}
+
+.character-card {
+  width: 100%;
+  .character-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.character-banner {
+  .character-image {
+    width: 150px;
+    height: 150px;
+  }
+  .element-image {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.character-talent-tab {
+  .item-image {
+    width: 60px;
+    height: 60px;
+  }
+  .talent-text {
+    line-height: 60px;
+  }
+  .mora-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.character-ascension-tab {
+  .item-image {
+    width: 60px;
+    height: 60px;
+  }
+  .ascension-text {
+    line-height: 60px;
+  }
+  .mora-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .character-card {
+    height: 130px;
+    .character-image {
+      width: 130px;
+      height: 130px;
+    }
+  }
+
+  .character-banner {
+    .character-image {
+      width: 200px;
+      height: 200px;
+    }
+    .element-image {
+      height: 60px;
+      width: 60px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .character-card {
+    width: calc(50% - 10px - 1px);
+  }
+}
