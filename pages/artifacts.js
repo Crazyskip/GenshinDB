@@ -1,30 +1,30 @@
 import Head from "next/head"
 import { useState } from "react"
-import CharacterCard from "../components/CharacterCard"
 import Navbar from "../components/Navbar"
+import ArtifactCard from "../components/ArtifactCard"
 
-import { getCharacters } from "../lib/characters"
+import { getArtifacts } from "../lib/artifacts"
 
 export async function getStaticProps() {
-  const characters = await getCharacters()
+  const artifacts = await getArtifacts()
   return {
     props: {
-      characters,
+      artifacts,
     },
   }
 }
 
-export default function Home({ characters }) {
+export default function Artifacts({ artifacts }) {
   const [search, setSearch] = useState("")
 
   const handleChange = (e) => {
     setSearch(e.target.value)
   }
+
   return (
     <div>
       <Head>
-        <title>Characters - Genshin Database</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Artifacts - Genshin Database</title>
         <meta name="description" content="Genshin Impact Database" />
         <meta name="keywords" content="Genshin" />
         <meta name="author" content="Damon Jensen" />
@@ -33,11 +33,11 @@ export default function Home({ characters }) {
           content="initial-scale=0.9, width=device-width, user-scalable=no"
         />
       </Head>
-      <Navbar page="Characters" />
-      <div className="text-gray-50 w-11/12 mx-auto">
+      <Navbar page="Artifacts" />
+      <div className="w-11/12 mx-auto text-gray-50">
         <div className="relative">
           <h2 className="text-4xl sm:text-5xl text-center font-semibold">
-            Characters
+            Artifacts
           </h2>
           <input
             type="text"
@@ -50,9 +50,9 @@ export default function Home({ characters }) {
           />
         </div>
         <div className="my-4 flex flex-wrap">
-          {characters.map((character) =>
-            character.name.toLowerCase().includes(search.toLowerCase()) ? (
-              <CharacterCard key={character._id} character={character} />
+          {artifacts.map((artifact) =>
+            artifact.name.toLowerCase().includes(search.toLowerCase()) ? (
+              <ArtifactCard key={artifact._id} artifact={artifact} />
             ) : (
               ""
             )

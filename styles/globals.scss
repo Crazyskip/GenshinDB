@@ -63,6 +63,27 @@ html {
   }
 }
 
+.artifact-card {
+  width: 100%;
+  .artifact-image {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.artifact {
+  hr {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.8);
+    width: 225px;
+  }
+  .artifact-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .character-card {
     height: 130px;
@@ -82,10 +103,25 @@ html {
       width: 60px;
     }
   }
+
+  .artifact-card {
+    .artifact-image {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .artifact {
+    .artifact-image {
+      width: 140px;
+      height: 140px;
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-  .character-card {
+  .character-card,
+  .artifact-card {
     width: calc(50% - 10px - 1px);
   }
 }

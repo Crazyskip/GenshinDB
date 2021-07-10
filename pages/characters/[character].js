@@ -49,6 +49,17 @@ export default function Character({ characterData }) {
 
   return (
     <div>
+      <Head>
+        <title>{characterData.name} - Genshin Database</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Genshin Impact Database" />
+        <meta name="keywords" content="Genshin" />
+        <meta name="author" content="Damon Jensen" />
+        <meta
+          name="viewport"
+          content="initial-scale=0.9, width=device-width, user-scalable=no"
+        />
+      </Head>
       <Navbar />
       <CharacterBanner character={characterData} />
       <Tabs className="mt-4 w-full md:w-10/12 lg:w-3/4 mx-auto bg-gray-900 bg-opacity-30 pb-4">
