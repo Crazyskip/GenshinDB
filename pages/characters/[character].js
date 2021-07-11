@@ -45,8 +45,6 @@ export default function Character({ characterData }) {
     )
   }
 
-  console.log(characterData)
-
   return (
     <div>
       <Head>

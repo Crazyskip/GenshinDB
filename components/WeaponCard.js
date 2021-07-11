@@ -2,28 +2,28 @@ import Image from "next/image"
 import Link from "next/link"
 import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar"
 
-export default function ArtifactCard({ artifact }) {
+export default function WeaponCard({ weapon }) {
   const stars = []
-  for (let i = 0; i < artifact.stars; i++) {
+  for (let i = 0; i < weapon.stars; i++) {
     stars.push(<AiFillStar key={i} className="pr-1" />)
   }
   return (
-    <div className="artifact-card m-1 bg-gray-900 bg-opacity-60 hover:bg-opacity-80">
-      <Link href={`/artifacts/${artifact.name.split(" ").join("_")}`}>
+    <div className="weapon-card m-1 bg-gray-900 bg-opacity-60 hover:bg-opacity-80">
+      <Link href={`/weapons/${weapon.name.split(" ").join("_")}`}>
         <a>
           <div className="flex">
             <div className="flex flex-col flex-1 px-6 justify-center">
               <h3 className="crimson-font font-bold text-2xl sm:text-3xl xl:text-4xl">
-                {artifact.name.toUpperCase()}
+                {weapon.name.toUpperCase()}
               </h3>
               <div className="flex text-yellow-300 text-2xl sm:text-3xl">
                 {stars.map((star) => star)}
               </div>
             </div>
-            <div className="artifact-image relative">
+            <div className="weapon-image relative">
               <Image
-                src={`/assets/artifacts/${artifact.images[0]}`}
-                alt={`Artifact ${artifact.name}`}
+                src={`/assets/weapons/${weapon.image}`}
+                alt={`Weapon ${weapon.name}`}
                 layout="fill"
                 objectFit="cover"
               />

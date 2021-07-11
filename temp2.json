@@ -1,0 +1,9 @@
+{
+  "name": "Bone Shard",
+  "images": [
+    "fragile_bone_shard.png",
+    "sturdy_bone_shard.png",
+    "fossilized_bone_shard.png"
+  ],
+  "type": "weapon2"
+}

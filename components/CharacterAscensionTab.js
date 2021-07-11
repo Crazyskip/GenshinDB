@@ -7,9 +7,9 @@ export default function CharacterAscensionTab({ character }) {
         character.ascensionGem.gems[itemRow.rarity].image
       }`
     } else if (itemRow.item === "ascensionBossItem") {
-      return `/assets/items/ascension/${character.ascensionBossItem.image}`
+      return `/assets/items/ascension/boss/${character.ascensionBossItem.image}`
     } else if (itemRow.item === "local") {
-      return `/assets/items/local/${character.ascensionItem.image}`
+      return `/assets/items/ascension/character/${character.ascensionItem.image}`
     } else if (itemRow.item === "common") {
       return `/assets/items/common/${
         character.commonItem.items[itemRow.rarity].image
@@ -87,7 +87,7 @@ export default function CharacterAscensionTab({ character }) {
           <div className="flex items-center">
             <div className="item-image relative">
               <Image
-                src={`/assets/items/ascension/${character.ascensionBossItem.image}`}
+                src={`/assets/items/ascension/boss/${character.ascensionBossItem.image}`}
                 alt={character.ascensionBossItem.name}
                 layout="fill"
                 objectFit="cover"

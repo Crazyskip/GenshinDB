@@ -84,6 +84,27 @@ html {
   }
 }
 
+.weapon-card {
+  width: 100%;
+  .weapon-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.weapon {
+  .weapon-image {
+    width: 120px;
+    height: 120px;
+  }
+  hr {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.8);
+    width: 225px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .character-card {
     height: 130px;
@@ -117,11 +138,26 @@ html {
       height: 140px;
     }
   }
+
+  .weapon-card {
+    .weapon-image {
+      width: 130px;
+      height: 130px;
+    }
+  }
+
+  .weapon {
+    .weapon-image {
+      width: 130px;
+      height: 130px;
+    }
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   .character-card,
-  .artifact-card {
+  .artifact-card,
+  .weapon-card {
     width: calc(50% - 10px - 1px);
   }
 }

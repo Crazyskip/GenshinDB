@@ -84,22 +84,16 @@ export default function Artifact({ artifact }) {
           <div className="text-gray-50 bg-gray-900 bg-opacity-60 p-4 flex flex-col items-center">
             <span className="text-3xl font-semibold pb-1">Set Bonus</span>
             <hr className="artifact-hr mb-4" />
-            <div className="text-lg xl:text-xl font-semibold leading-none">
-              2 Pieces
-            </div>
-            <div className="text-sm xl:text-base text-center pb-4">
-              {artifact.bonus[0]}
-            </div>
-            {artifact.bonus.length < 2 ? (
-              ""
-            ) : (
-              <div className="text-center">
-                <div className="text-lg xl:text-xl font-semibold leading-none">
-                  4 Pieces
+            {artifact.bonus.map((bonus, index) => (
+              <div key={bonus}>
+                <div className="text-lg xl:text-xl text-center font-semibold leading-none">
+                  {(index + 1) * 2} Pieces
                 </div>
-                <div className="text-sm xl:text-base">{artifact.bonus[1]}</div>
+                <div className="text-sm xl:text-base text-center pb-4">
+                  {artifact.bonus[index]}
+                </div>
               </div>
-            )}
+            ))}
           </div>
         </div>
       </div>

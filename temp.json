@@ -1,0 +1,13 @@
+{
+  "name": "Rust",
+  "image": "rust.png",
+  "stars": 4,
+  "type": "bow",
+  "atk": 42,
+  "secondaryStat": "% ATK",
+  "secondaryStatValue": 9,
+  "location": "Gacha",
+  "ascension_item1_name": "Guyun",
+  "ascension_item2_name": "Sacrificial Knife",
+  "common_item_name": "Mask"
+}
