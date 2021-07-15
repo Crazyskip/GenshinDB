@@ -74,12 +74,6 @@ export default function Character({ characterData }) {
           >
             Ascension
           </CustomTab>
-          <CustomTab
-            className="px-6 py-3 hover:text-gray-50 focus:outline-none"
-            index={2}
-          >
-            Builds
-          </CustomTab>
         </TabList>
         <TabPanels>
           <TabPanel className="focus:outline-none">
@@ -88,7 +82,6 @@ export default function Character({ characterData }) {
           <TabPanel className="focus:outline-none">
             <CharacterAscensionTab character={characterData} />
           </TabPanel>
-          <TabPanel className="focus:outline-none"></TabPanel>
         </TabPanels>
       </Tabs>
     </div>

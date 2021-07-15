@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { useState } from "react"
+import { IconContext } from "react-icons"
+import { BiLinkExternal } from "@react-icons/all-files/bi/BiLinkExternal"
 
 export default function Navbar({ page }) {
   const [active, setActive] = useState(false)
@@ -26,7 +28,7 @@ export default function Navbar({ page }) {
           </a>
         </Link>
         <button
-          className="inline-flex p-3 hover:text-gray-400 rounded md:hidden text-gray-50 ml-auto hover:text-gray-400 focus:outline-none"
+          className="inline-flex p-3 hover:text-gray-400 rounded md:hidden text-gray-50 ml-auto focus:outline-none"
           onClick={handleClick}
         >
           <svg
@@ -63,6 +65,15 @@ export default function Navbar({ page }) {
                 </Link>
               )
             })}
+            <a
+              className="px-4 py-2 text-gray-400 hover:text-gray-50"
+              href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRq-sQxkvdbvaJtQAGG6iVz2q2UN9FCKZ8Mkyis87QHFptcOU3ViLh0_PJyMxFSgwJZrd10kbYpQFl1/pubhtml#"
+            >
+              <div className="flex">
+                <span>Builds</span>
+                <BiLinkExternal className="text-xs mt-1" />
+              </div>
+            </a>
           </div>
         </div>
       </nav>

@@ -103,6 +103,13 @@ html {
     background: rgba(255, 255, 255, 0.8);
     width: 225px;
   }
+  .item-image {
+    width: 60px;
+    height: 60px;
+  }
+  .ascension-text {
+    line-height: 60px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
