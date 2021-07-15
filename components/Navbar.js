@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { useState } from "react"
-import { IconContext } from "react-icons"
 import { BiLinkExternal } from "@react-icons/all-files/bi/BiLinkExternal"
 
 export default function Navbar({ page }) {
