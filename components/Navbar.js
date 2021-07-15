@@ -27,7 +27,7 @@ export default function Navbar({ page }) {
           </a>
         </Link>
         <button
-          className="inline-flex p-3 hover:text-gray-400 rounded md:hidden text-gray-50 ml-auto focus:outline-none"
+          className="inline-flex p-3 hover:text-gray-400 rounded lg:hidden text-gray-50 ml-auto focus:outline-none"
           onClick={handleClick}
         >
           <svg
@@ -48,9 +48,9 @@ export default function Navbar({ page }) {
         <div
           className={`${
             active ? "" : "hidden"
-          } w-full md:inline-flex md:flex-grow md:w-auto`}
+          } w-full lg:inline-flex lg:flex-grow lg:w-auto`}
         >
-          <div className="md:inline-flex md:flex-row md:w-auto w-full md:items-center flex flex-col text-xl">
+          <div className="lg:inline-flex lg:flex-row lg:w-auto w-full lg:items-center flex flex-col text-xl">
             {links.map((link) => {
               return (
                 <Link href={link.href} key={link.name}>

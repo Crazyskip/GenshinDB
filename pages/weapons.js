@@ -11,6 +11,7 @@ export async function getStaticProps() {
     props: {
       weapons,
     },
+    revalidate: 1,
   }
 }
 
@@ -22,8 +23,19 @@ export default function Weapons({ weapons }) {
   }
   return (
     <div>
+      <Head>
+        <title>Weapons - Genshin Database</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Genshin Impact Database" />
+        <meta name="keywords" content="Genshin" />
+        <meta name="author" content="Damon Jensen" />
+        <meta
+          name="viewport"
+          content="initial-scale=0.9, width=device-width, user-scalable=no"
+        />
+      </Head>
       <Navbar page="Weapons" />
-      <div className="w-11/12 mx-auto text-gray-50">
+      <div className="weapons mx-auto text-gray-50">
         <div className="relative">
           <h2 className="text-4xl sm:text-5xl text-center font-semibold">
             Weapons

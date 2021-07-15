@@ -11,6 +11,7 @@ export async function getStaticProps() {
     props: {
       characters,
     },
+    revalidate: 1,
   }
 }
 
@@ -34,7 +35,7 @@ export default function Home({ characters }) {
         />
       </Head>
       <Navbar page="Characters" />
-      <div className="text-gray-50 w-11/12 mx-auto">
+      <div className="characters text-gray-50 mx-auto">
         <div className="relative">
           <h2 className="text-4xl sm:text-5xl text-center font-semibold">
             Characters

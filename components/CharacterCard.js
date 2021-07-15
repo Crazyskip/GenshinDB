@@ -11,7 +11,7 @@ export default function CharacterCard({ character }) {
               <h3 className="crimson-font font-bold text-4xl">
                 {character.name.toUpperCase()}
               </h3>
-              <div className="text-lg">
+              <div className="text-xl">
                 <span>{character.stars} ✦ </span>
                 <span className="crimson-font font-bold">
                   {character.element.toUpperCase()}

@@ -16,7 +16,7 @@ export default function Abyss() {
         />
       </Head>
       <Navbar page="Spiral Abyss" />
-      <div className="w-11/12 mx-auto text-gray-50">
+      <div className="abyss mx-auto text-gray-50">
         <h2 className="text-4xl sm:text-5xl text-center font-semibold">
           Spiral Abyss
         </h2>

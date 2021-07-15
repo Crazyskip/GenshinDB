@@ -11,6 +11,7 @@ export async function getStaticProps() {
     props: {
       artifacts,
     },
+    revalidate: 1,
   }
 }
 
@@ -34,7 +35,7 @@ export default function Artifacts({ artifacts }) {
         />
       </Head>
       <Navbar page="Artifacts" />
-      <div className="w-11/12 mx-auto text-gray-50">
+      <div className="artifacts mx-auto text-gray-50">
         <div className="relative">
           <h2 className="text-4xl sm:text-5xl text-center font-semibold">
             Artifacts

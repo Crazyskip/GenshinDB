@@ -16,6 +16,13 @@ html {
   font-family: "Crimson Text", serif !important;
 }
 
+.characters,
+.weapons,
+.artifacts,
+.abyss {
+  width: 96%;
+}
+
 .character-card {
   width: 100%;
   .character-image {
@@ -113,6 +120,13 @@ html {
 }
 
 @media only screen and (min-width: 768px) {
+  .characters,
+  .weapons,
+  .artifacts,
+  .abyss {
+    width: 90%;
+  }
+
   .character-card {
     height: 130px;
     .character-image {
