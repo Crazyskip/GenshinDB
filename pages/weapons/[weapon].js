@@ -9,7 +9,7 @@ export async function getStaticProps({ params }) {
   const weapon = await getWeapon(params.weapon)
   return {
     props: { weapon },
-    revalidate: 1,
+    revalidate: 60,
   }
 }
 

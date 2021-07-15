@@ -9,7 +9,7 @@ export async function getStaticProps({ params }) {
   const artifact = await getArtifact(params.artifact)
   return {
     props: { artifact },
-    revalidate: 1,
+    revalidate: 60,
   }
 }
 
