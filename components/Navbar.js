@@ -73,6 +73,15 @@ export default function Navbar({ page }) {
                 <BiLinkExternal className="text-xs mt-1" />
               </div>
             </a>
+            <a
+              className="px-4 py-2 text-gray-400 hover:text-gray-50"
+              href="https://genshin-impact-map.appsample.com/"
+            >
+              <div className="flex">
+                <span>Map</span>
+                <BiLinkExternal className="text-xs mt-1" />
+              </div>
+            </a>
           </div>
         </div>
       </nav>
