@@ -54,8 +54,8 @@ export default function CharacterTalentTab({ character }) {
       { item: "bossItem", amount: 2 },
     ],
     [
-      { item: "talentBook", rarity: 2, amount: 12 },
-      { item: "common", rarity: 2, amount: 9 },
+      { item: "talentBook", rarity: 2, amount: 16 },
+      { item: "common", rarity: 2, amount: 12 },
       { item: "bossItem", amount: 2 },
       { item: "crown", amount: 1 },
     ],
