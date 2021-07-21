@@ -75,7 +75,7 @@ export default function Navbar({ page }) {
             </a>
             <a
               className="px-4 py-2 text-gray-400 hover:text-gray-50"
-              href="https://genshin-impact-map.appsample.com/"
+              href="https://webstatic-sea.mihoyo.com/app/ys-map-sea/"
             >
               <div className="flex">
                 <span>Map</span>
