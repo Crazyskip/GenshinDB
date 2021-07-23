@@ -198,6 +198,22 @@ export default function Weapon({ weapon }) {
 
   return (
     <div className="weapon">
+      <Head>
+        <title>{weapon.name} - Genshin Database</title>
+        <meta
+          name="description"
+          content={`Genshin Impact ${weapon.name} ascension requirements and refinement details`}
+        />
+        <meta
+          name="keywords"
+          content={`Genshin Impact,Genshin,database,${weapon.name}`}
+        />
+        <meta name="author" content="Damon Jensen" />
+        <meta
+          name="viewport"
+          content="initial-scale=0.9, width=device-width, user-scalable=no"
+        />
+      </Head>
       <Navbar />
       <div className="w-full md:w-9/12 mx-auto">
         <div className="flex items-center bg-gray-900 bg-opacity-60 mb-4">

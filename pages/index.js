@@ -26,8 +26,14 @@ export default function Home({ characters }) {
       <Head>
         <title>Characters - Genshin Database</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Genshin Impact Database" />
-        <meta name="keywords" content="Genshin" />
+        <meta
+          name="description"
+          content="List of Genshin Impact Characters including their ascension and talent requirements."
+        />
+        <meta
+          name="keywords"
+          content="Genshin Impact,Genshin,database,characters,character"
+        />
         <meta name="author" content="Damon Jensen" />
         <meta
           name="viewport"

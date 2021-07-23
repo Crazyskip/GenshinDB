@@ -7,8 +7,14 @@ export default function Abyss() {
     <div>
       <Head>
         <title>Spiral Abyss - Genshin Database</title>
-        <meta name="description" content="Genshin Impact Database" />
-        <meta name="keywords" content="Genshin" />
+        <meta
+          name="description"
+          content="Genshin Impact Spiral Abyss recommendations."
+        />
+        <meta
+          name="keywords"
+          content="Genshin Impact,Genshin,Spiral Abyss,Abyss"
+        />
         <meta name="author" content="Damon Jensen" />
         <meta
           name="viewport"

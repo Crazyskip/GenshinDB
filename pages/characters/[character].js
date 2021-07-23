@@ -50,8 +50,14 @@ export default function Character({ characterData }) {
       <Head>
         <title>{characterData.name} - Genshin Database</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Genshin Impact Database" />
-        <meta name="keywords" content="Genshin" />
+        <meta
+          name="description"
+          content={`Genshin Impact ${characterData.name} ascension and talent requirements`}
+        />
+        <meta
+          name="keywords"
+          content={`Genshin Impact,Genshin,database,${characterData.name}`}
+        />
         <meta name="author" content="Damon Jensen" />
         <meta
           name="viewport"

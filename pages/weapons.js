@@ -26,8 +26,14 @@ export default function Weapons({ weapons }) {
       <Head>
         <title>Weapons - Genshin Database</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Genshin Impact Database" />
-        <meta name="keywords" content="Genshin" />
+        <meta
+          name="description"
+          content="List of Genshin Impact Weapons including their ascension requirements and refinement details."
+        />
+        <meta
+          name="keywords"
+          content="Genshin Impact,Genshin,database,Weapon,Weapons"
+        />
         <meta name="author" content="Damon Jensen" />
         <meta
           name="viewport"

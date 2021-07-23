@@ -31,8 +31,14 @@ export default function Artifact({ artifact }) {
     <div className="artifact">
       <Head>
         <title>{artifact.name} - Genshin Database</title>
-        <meta name="description" content="Genshin Impact Database" />
-        <meta name="keywords" content="Genshin" />
+        <meta
+          name="description"
+          content={`Genshin Impact ${artifact.name} set details and bonuses`}
+        />
+        <meta
+          name="keywords"
+          content={`Genshin Impact,Genshin,database,${artifact.name}`}
+        />
         <meta name="author" content="Damon Jensen" />
         <meta
           name="viewport"
