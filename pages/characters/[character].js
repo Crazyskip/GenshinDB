@@ -52,11 +52,11 @@ export default function Character({ characterData }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content={`Genshin Impact ${characterData.name} ascension and talent requirements`}
+          content={`Genshin Impact character ${characterData.name} ascension and talent requirements`}
         />
         <meta
           name="keywords"
-          content={`Genshin Impact,Genshin,database,${characterData.name}`}
+          content={`${characterData.name}, character, Genshin Impact, Genshin, database`}
         />
         <meta name="author" content="Damon Jensen" />
         <meta

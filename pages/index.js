@@ -32,7 +32,7 @@ export default function Home({ characters }) {
         />
         <meta
           name="keywords"
-          content="Genshin Impact,Genshin,database,characters,character"
+          content="Genshin Impact, Genshin, database, characters, character"
         />
         <meta name="author" content="Damon Jensen" />
         <meta

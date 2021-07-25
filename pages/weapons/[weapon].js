@@ -202,11 +202,11 @@ export default function Weapon({ weapon }) {
         <title>{weapon.name} - Genshin Database</title>
         <meta
           name="description"
-          content={`Genshin Impact ${weapon.name} ascension requirements and refinement details`}
+          content={`Genshin Impact weapon ${weapon.name} ascension requirements and refinement details`}
         />
         <meta
           name="keywords"
-          content={`Genshin Impact,Genshin,database,${weapon.name}`}
+          content={`${weapon.name}, weapon, Genshin Impact, Genshin, database`}
         />
         <meta name="author" content="Damon Jensen" />
         <meta

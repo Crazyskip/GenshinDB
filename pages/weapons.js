@@ -32,7 +32,7 @@ export default function Weapons({ weapons }) {
         />
         <meta
           name="keywords"
-          content="Genshin Impact,Genshin,database,Weapon,Weapons"
+          content="Genshin Impact, Genshin, database, Weapon, Weapons"
         />
         <meta name="author" content="Damon Jensen" />
         <meta

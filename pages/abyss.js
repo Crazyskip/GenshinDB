@@ -13,7 +13,7 @@ export default function Abyss() {
         />
         <meta
           name="keywords"
-          content="Genshin Impact,Genshin,Spiral Abyss,Abyss"
+          content="Genshin Impact, Genshin, Spiral Abyss, Abyss"
         />
         <meta name="author" content="Damon Jensen" />
         <meta

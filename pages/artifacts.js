@@ -32,7 +32,7 @@ export default function Artifacts({ artifacts }) {
         />
         <meta
           name="keywords"
-          content="Genshin Impact,Genshin,database,Artifact,Artifacts,Artifact Set"
+          content="Genshin Impact, Genshin, database, Artifact, Artifacts, Artifact Set"
         />
         <meta name="author" content="Damon Jensen" />
         <meta
