@@ -29,38 +29,7 @@ export default function Abyss() {
         <div className="flex flex-wrap mt-4">
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/h9hz6xrztfw61.png?width=2961&format=png&auto=webp&s=280478e62f6f49a521b4907484e92d69f6477835"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image
-                src="/assets/abyss/info1.jpg"
-                alt="abyss info 1"
-                width={1500}
-                height={850}
-                layout="responsive"
-              />
-            </a>
-          </div>
-          <div className="w-full xl:w-1/2 p-2">
-            <a
-              href="https://preview.redd.it/jpoimwrztfw61.png?width=2961&format=png&auto=webp&s=082e7546e9c402dd5b65f6aa9921c22d97c3478c"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image
-                src="/assets/abyss/info2.jpg"
-                alt="abyss info 2"
-                width={1500}
-                height={850}
-                layout="responsive"
-              />
-            </a>
-          </div>
-
-          <div className="w-full xl:w-1/2 p-2">
-            <a
-              href="https://preview.redd.it/qk566a5u3n571.png?width=2981&format=png&auto=webp&s=fbee0ec5f1cb0d55180ac031375911085698f88c"
+              href="https://preview.redd.it/0fme1bqbime71.png?width=1920&format=png&auto=webp&s=d2678c6f66868137674571e8f505f2007b42f504"
               target="_blank"
               rel="noreferrer"
             >
@@ -75,7 +44,7 @@ export default function Abyss() {
           </div>
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/bc5feh5u3n571.png?width=2981&format=png&auto=webp&s=2707cc704a1c089d09e02ca940ec431df7639628"
+              href="https://preview.redd.it/tic1kxacime71.png?width=1920&format=png&auto=webp&s=3579eb940e4c1e7d1a0e0b62ac548a68964d6f27"
               target="_blank"
               rel="noreferrer"
             >
@@ -91,7 +60,7 @@ export default function Abyss() {
 
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/z4svrg5u3n571.png?width=2981&format=png&auto=webp&s=fccf57f325aec3be65f9f34f1ebeed3df44e5aab"
+              href="https://preview.redd.it/cg4id4wcime71.png?width=1920&format=png&auto=webp&s=47645c50403e63b9b43e29f96e121f80fef29978"
               target="_blank"
               rel="noreferrer"
             >
@@ -106,7 +75,7 @@ export default function Abyss() {
           </div>
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/rsjl6x5u3n571.png?width=2981&format=png&auto=webp&s=6403ea0aefbd283bd75abc1433528dfad7713bf3"
+              href="https://preview.redd.it/65omcladime71.png?width=1920&format=png&auto=webp&s=a2deb12a056cd7a1633a3cedf66bd48d8157e263"
               target="_blank"
               rel="noreferrer"
             >
