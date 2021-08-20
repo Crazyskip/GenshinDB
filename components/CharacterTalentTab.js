@@ -1,7 +1,6 @@
 import Image from "next/image"
 
 export default function CharacterTalentTab({ character }) {
-  console.log(character)
   function getImage(itemRow) {
     if (itemRow.item === "talentBook") {
       return `/assets/items/talents/${

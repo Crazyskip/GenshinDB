@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 export default function Artifact({ artifact }) {
   const stars = []
   for (let i = 0; i < artifact.stars; i++) {
-    stars.push(<AiFillStar key={artifact.key + i} className="pr-1" />)
+    stars.push(<AiFillStar key={artifact.name + i} className="pr-1" />)
   }
 
   return (
@@ -57,7 +57,7 @@ export default function Artifact({ artifact }) {
         </div>
         <div className="artifact-image relative">
           <Image
-            src={`/assets/artifacts/${artifact.images[0]}`}
+            src={`/assets/artifacts/${artifact.images[0]}.webp`}
             alt={`Artifact ${artifact.name}`}
             layout="fill"
             objectFit="cover"
@@ -75,7 +75,7 @@ export default function Artifact({ artifact }) {
                 return (
                   <Image
                     key={image}
-                    src={`/assets/artifacts/${image}`}
+                    src={`/assets/artifacts/${image}.webp`}
                     alt={`Artifact ${artifact.name}`}
                     height={94}
                     width={94}
@@ -90,16 +90,18 @@ export default function Artifact({ artifact }) {
           <div className="text-gray-50 bg-gray-900 bg-opacity-60 p-4 flex flex-col items-center">
             <span className="text-3xl font-semibold pb-1">Set Bonus</span>
             <hr className="artifact-hr mb-4" />
-            {artifact.bonus.map((bonus, index) => (
-              <div key={bonus}>
-                <div className="text-lg xl:text-xl text-center font-semibold leading-none">
-                  {(index + 1) * 2} Pieces
+            {artifact.bonus.map((bonus, index) => {
+              return (
+                <div key={bonus}>
+                  <div className="text-lg xl:text-xl text-center font-semibold leading-none">
+                    {(index + 1) * 2} Pieces
+                  </div>
+                  <div className="text-sm xl:text-base text-center pb-4">
+                    {artifact.bonus[index]}
+                  </div>
                 </div>
-                <div className="text-sm xl:text-base text-center pb-4">
-                  {artifact.bonus[index]}
-                </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </div>
