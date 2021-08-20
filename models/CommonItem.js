@@ -1,13 +1,13 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
 const CommonItemSchema = new mongoose.Schema(
   {
+    _id: mongoose.Schema.Types.ObjectId,
     name: String,
-    books: [{ name: String, image: String }],
-    image: String,
+    items: [{ name: String, image: String }],
   },
-  { collection: "common-items" }
-)
+  { collection: "commonItems" }
+);
 
 export default mongoose.models.CommonItem ||
-  mongoose.model("CommonItem", CommonItemSchema)
+  mongoose.model("CommonItem", CommonItemSchema);

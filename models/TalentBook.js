@@ -1,13 +1,14 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
 const TalentBookSchema = new mongoose.Schema(
   {
+    _id: mongoose.Schema.Types.ObjectId,
     name: String,
-    books: [{ name: String, image: String }],
+    items: [{ name: String, image: String }],
     days: String,
   },
-  { collection: "talent-books" }
-)
+  { collection: "talentBooks" }
+);
 
 export default mongoose.models.TalentBook ||
-  mongoose.model("TalentBook", TalentBookSchema)
+  mongoose.model("TalentBook", TalentBookSchema);
