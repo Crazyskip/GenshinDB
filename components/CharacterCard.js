@@ -2,7 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function CharacterCard({ character }) {
-  console.log(character)
   return (
     <div className="character-card m-1 bg-gray-900 bg-opacity-60 hover:bg-opacity-80">
       <Link href={`/characters/${character.name.split(" ").join("_")}`}>
