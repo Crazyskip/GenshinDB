@@ -9,11 +9,11 @@ export default function Abyss() {
         <title>Spiral Abyss - Genshin Database</title>
         <meta
           name="description"
-          content="Genshin Impact Spiral Abyss recommendations."
+          content="Genshin Impact Spiral Abyss 2.1 details and recommendations."
         />
         <meta
           name="keywords"
-          content="Genshin Impact, Genshin, Spiral Abyss, Abyss"
+          content="Genshin Impact, Genshin, Spiral Abyss, Abyss, 2.1 Abyss, Database"
         />
         <meta name="author" content="Damon Jensen" />
         <meta
@@ -60,7 +60,7 @@ export default function Abyss() {
 
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/cg4id4wcime71.png?width=1920&format=png&auto=webp&s=47645c50403e63b9b43e29f96e121f80fef29978"
+              href="https://preview.redd.it/0kalsfabysn71.png?width=1920&format=png&auto=webp&s=2560f14fb3417d1a50ac591625230905ed873a28"
               target="_blank"
               rel="noreferrer"
             >
@@ -75,7 +75,7 @@ export default function Abyss() {
           </div>
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/65omcladime71.png?width=1920&format=png&auto=webp&s=a2deb12a056cd7a1633a3cedf66bd48d8157e263"
+              href="https://preview.redd.it/9l9j3cqdysn71.png?width=1920&format=png&auto=webp&s=d36dbeb91a5527d69f86e5c4226653c90b6f68c4"
               target="_blank"
               rel="noreferrer"
             >
