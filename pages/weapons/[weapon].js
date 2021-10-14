@@ -30,16 +30,16 @@ export default function Weapon({ weapon }) {
   function getImage(itemRow) {
     if (itemRow.item === "ascensionItem1") {
       return `/assets/items/ascension/weapon1/${
-        weapon.ascensionItem1.images[itemRow.rarity]
-      }`
+        weapon.weaponPrimaryItem.items[itemRow.rarity].image
+      }.webp`
     } else if (itemRow.item === "ascensionItem2") {
       return `/assets/items/ascension/weapon2/${
-        weapon.ascensionItem2.images[itemRow.rarity]
-      }`
+        weapon.weaponSecondaryItem.items[itemRow.rarity].image
+      }.webp`
     } else if (itemRow.item === "common") {
       return `/assets/items/common/${
         weapon.commonItem.items[itemRow.rarity].image
-      }`
+      }.webp`
     }
   }
 
@@ -229,7 +229,7 @@ export default function Weapon({ weapon }) {
           </div>
           <div className="weapon-image relative">
             <Image
-              src={`/assets/weapons/${weapon.image}`}
+              src={`/assets/weapons/${weapon.image}.webp`}
               alt={`Weapon ${weapon.name}`}
               layout="fill"
               objectFit="cover"
@@ -273,14 +273,14 @@ export default function Weapon({ weapon }) {
             <div className="flex items-center">
               <div className="item-image relative">
                 <Image
-                  src={`/assets/items/ascension/weapon1/${weapon.ascensionItem1.images[0]}`}
-                  alt={weapon.ascensionItem1.name}
+                  src={`/assets/items/ascension/weapon1/${weapon.weaponPrimaryItem.items[0].image}.webp`}
+                  alt={weapon.weaponPrimaryItem.name}
                   layout="fill"
                   objectFit="cover"
                 />
               </div>
               <div className="mx-2">
-                <span>{weapon.ascensionItem1.days}</span>
+                <span>{weapon.weaponPrimaryItem.days}</span>
               </div>
             </div>
           </div>
@@ -339,7 +339,7 @@ export default function Weapon({ weapon }) {
                   <div className="flex justify-center">
                     <div className="mora-image relative">
                       <Image
-                        src="/assets/items/currency/mora.png"
+                        src="/assets/items/currency/mora.webp"
                         alt="mora"
                         width={60}
                         height={60}
@@ -363,7 +363,7 @@ export default function Weapon({ weapon }) {
             <span className="text-3xl font-semibold pb-1">Refinements</span>
             <hr className="artifact-hr mb-4" />
             <div className="flex flex-col items-center">
-              {weapon.refinement.map((refinement, index) => {
+              {weapon.refinements.map((refinement, index) => {
                 return (
                   <div key={refinement} className="text-center">
                     <div className="text-xl font-semibold leading-none">

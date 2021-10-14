@@ -1,8 +1,8 @@
 import Head from "next/head"
 import Image from "next/image"
-import Navbar from "../../../components/Navbar"
+import Navbar from "../../components/Navbar"
 
-import { getArtifact, getAllArtifactNames } from "../../../lib/artifacts"
+import { getArtifact, getAllArtifactNames } from "../../lib/artifacts"
 import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar"
 
 export async function getStaticProps({ params }) {

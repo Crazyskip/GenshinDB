@@ -11,8 +11,8 @@ export default function Navbar({ page }) {
 
   const links = [
     { href: "/", name: "Characters" },
-    // { href: "/weapons", name: "Weapons" },
-    // { href: "/artifacts", name: "Artifacts" },
+    { href: "/weapons", name: "Weapons" },
+    { href: "/artifacts", name: "Artifacts" },
     { href: "/abyss", name: "Spiral Abyss" },
   ]
 

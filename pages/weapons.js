@@ -1,9 +1,9 @@
 import Head from "next/head"
 import { useState } from "react"
-import Navbar from "../../components/Navbar"
-import WeaponCard from "../../components/WeaponCard"
+import Navbar from "../components/Navbar"
+import WeaponCard from "../components/WeaponCard"
 
-import { getWeapons } from "../../lib/weapons"
+import { getWeapons } from "../lib/weapons"
 
 export async function getStaticProps() {
   const weapons = await getWeapons()
