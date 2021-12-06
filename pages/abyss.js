@@ -34,7 +34,7 @@ export default function Abyss() {
               rel="noreferrer"
             >
               <Image
-                src="/assets/abyss/floor9.jpg"
+                src="/assets/abyss/floor9.webp"
                 alt="abyss floor 9"
                 width={1500}
                 height={850}
@@ -49,7 +49,7 @@ export default function Abyss() {
               rel="noreferrer"
             >
               <Image
-                src="/assets/abyss/floor10.jpg"
+                src="/assets/abyss/floor10.webp"
                 alt="abyss floor 10"
                 width={1500}
                 height={850}
@@ -60,12 +60,12 @@ export default function Abyss() {
 
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/cg4id4wcime71.png?width=1920&format=png&auto=webp&s=47645c50403e63b9b43e29f96e121f80fef29978"
+              href="https://preview.redd.it/p6tsf29snt281.png?width=1920&format=png&auto=webp&s=40f2546e479b8cc20f945ebcd83810b635289b79"
               target="_blank"
               rel="noreferrer"
             >
               <Image
-                src="/assets/abyss/floor11.jpg"
+                src="/assets/abyss/floor11.webp"
                 alt="abyss floor 11"
                 width={1500}
                 height={850}
@@ -75,12 +75,12 @@ export default function Abyss() {
           </div>
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/65omcladime71.png?width=1920&format=png&auto=webp&s=a2deb12a056cd7a1633a3cedf66bd48d8157e263"
+              href="https://preview.redd.it/wo2iqz8snt281.png?width=1920&format=png&auto=webp&s=11034082668139fd777e991137b805ecb3317d44"
               target="_blank"
               rel="noreferrer"
             >
               <Image
-                src="/assets/abyss/floor12.jpg"
+                src="/assets/abyss/floor12.webp"
                 alt="abyss floor 12"
                 width={1500}
                 height={850}
