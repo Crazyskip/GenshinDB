@@ -15,7 +15,7 @@ export default function CharacterBanner({ character }) {
         </div>
         <div className="element-image mt-auto relative">
           <Image
-            src={`/assets/elements/${character.element}.png`}
+            src={`/assets/elements/${character.element}.webp`}
             alt={`Element ${character.element}`}
             layout="fill"
             objectFit="cover"
@@ -24,7 +24,7 @@ export default function CharacterBanner({ character }) {
       </div>
       <div className="character-image relative">
         <Image
-          src={`/assets/characters/${character.image}`}
+          src={`/assets/characters/${character.image}.webp`}
           alt={`Character ${character.name}`}
           layout="fill"
           objectFit="cover"

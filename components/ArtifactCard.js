@@ -22,7 +22,7 @@ export default function ArtifactCard({ artifact }) {
             </div>
             <div className="artifact-image relative">
               <Image
-                src={`/assets/artifacts/${artifact.images[0]}`}
+                src={`/assets/artifacts/${artifact.images[0]}.webp`}
                 alt={`Artifact ${artifact.name}`}
                 layout="fill"
                 objectFit="cover"

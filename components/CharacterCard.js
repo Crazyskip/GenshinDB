@@ -20,7 +20,7 @@ export default function CharacterCard({ character }) {
             </div>
             <div className="character-image relative">
               <Image
-                src={`/assets/characters/${character.image}`}
+                src={`/assets/characters/${character.image}.webp`}
                 alt={`Character ${character.name}`}
                 layout="fill"
                 objectFit="cover"

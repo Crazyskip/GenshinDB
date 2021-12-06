@@ -1,21 +1,31 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
 const WeaponSchema = new mongoose.Schema(
   {
+    _id: mongoose.Schema.Types.ObjectId,
     name: String,
     image: String,
     stars: Number,
     type: String,
-    atk: Number,
+    atk: String,
     secondaryStat: String,
     secondaryStatValue: Number,
     location: String,
-    ascension_item1_name: String,
-    ascension_item2_name: String,
-    common_item_name: String,
-    refinement: [String],
+    refinements: [String],
+    weaponPrimaryItem: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "WeaponPrimaryItem",
+    },
+    weaponSecondaryItem: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "WeaponSecondaryItem",
+    },
+    commonItem: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "CommonItem",
+    },
   },
   { collection: "weapons" }
-)
+);
 
-export default mongoose.models.Weapon || mongoose.model("Weapon", WeaponSchema)
+export default mongoose.models.Weapon || mongoose.model("Weapon", WeaponSchema);

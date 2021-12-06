@@ -22,7 +22,7 @@ export default function WeaponCard({ weapon }) {
             </div>
             <div className="weapon-image relative">
               <Image
-                src={`/assets/weapons/${weapon.image}`}
+                src={`/assets/weapons/${weapon.image}.webp`}
                 alt={`Weapon ${weapon.name}`}
                 layout="fill"
                 objectFit="cover"

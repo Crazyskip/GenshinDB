@@ -4,16 +4,16 @@ export default function CharacterTalentTab({ character }) {
   function getImage(itemRow) {
     if (itemRow.item === "talentBook") {
       return `/assets/items/talents/${
-        character.talentBook.books[itemRow.rarity].image
-      }`
+        character.talentBook.items[itemRow.rarity].image
+      }.webp`
     } else if (itemRow.item === "common") {
       return `/assets/items/common/${
         character.commonItem.items[itemRow.rarity].image
-      }`
+      }.webp`
     } else if (itemRow.item === "bossItem") {
-      return `/assets/items/talents/${character.bossItem.image}`
+      return `/assets/items/talents/${character.bossItem.image}.webp`
     } else if (itemRow.item === "crown") {
-      return "/assets/items/talents/crown_of_sagehood.png"
+      return "/assets/items/talents/crown_of_sagehood.webp"
     }
   }
 
@@ -81,8 +81,8 @@ export default function CharacterTalentTab({ character }) {
           <div className="flex items-center">
             <div className="item-image relative">
               <Image
-                src={`/assets/items/talents/${character.talentBook.books[0].image}`}
-                alt={character.talentBook.books[0].name}
+                src={`/assets/items/talents/${character.talentBook.items[0].image}.webp`}
+                alt={character.talentBook.items[0].name}
                 layout="fill"
                 objectFit="cover"
               />
@@ -94,7 +94,7 @@ export default function CharacterTalentTab({ character }) {
           <div className="flex items-center">
             <div className="item-image relative">
               <Image
-                src={`/assets/items/talents/${character.bossItem.image}`}
+                src={`/assets/items/talents/${character.bossItem.image}.webp`}
                 alt={character.bossItem.name}
                 layout="fill"
                 objectFit="cover"
@@ -158,7 +158,7 @@ export default function CharacterTalentTab({ character }) {
                 <div className="flex justify-center">
                   <div className="mora-image relative">
                     <Image
-                      src="/assets/items/currency/mora.png"
+                      src="/assets/items/currency/mora.webp"
                       alt="mora"
                       width={60}
                       height={60}

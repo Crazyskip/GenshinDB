@@ -2,18 +2,18 @@ import Image from "next/image"
 
 export default function CharacterAscensionTab({ character }) {
   function getImage(itemRow) {
-    if (itemRow.item === "ascensionGem") {
+    if (itemRow.item === "jewel") {
       return `/assets/items/gems/${
-        character.ascensionGem.gems[itemRow.rarity].image
-      }`
-    } else if (itemRow.item === "ascensionBossItem") {
-      return `/assets/items/ascension/boss/${character.ascensionBossItem.image}`
+        character.jewel.items[itemRow.rarity].image
+      }.webp`
+    } else if (itemRow.item === "elementalStone") {
+      return `/assets/items/ascension/boss/${character.elementalStone.image}.webp`
     } else if (itemRow.item === "local") {
-      return `/assets/items/ascension/character/${character.ascensionItem.image}`
+      return `/assets/items/ascension/character/${character.localItem.image}.webp`
     } else if (itemRow.item === "common") {
       return `/assets/items/common/${
         character.commonItem.items[itemRow.rarity].image
-      }`
+      }.webp`
     }
   }
 
@@ -21,37 +21,37 @@ export default function CharacterAscensionTab({ character }) {
 
   const itemsTemplate = [
     [
-      { item: "ascensionGem", rarity: 0, amount: 1 },
+      { item: "jewel", rarity: 0, amount: 1 },
       { item: "local", amount: 3 },
       { item: "common", rarity: 0, amount: 3 },
     ],
     [
-      { item: "ascensionGem", rarity: 1, amount: 3 },
-      { item: "ascensionBossItem", amount: 2 },
+      { item: "jewel", rarity: 1, amount: 3 },
+      { item: "elementalStone", amount: 2 },
       { item: "local", amount: 10 },
       { item: "common", rarity: 0, amount: 15 },
     ],
     [
-      { item: "ascensionGem", rarity: 1, amount: 6 },
-      { item: "ascensionBossItem", amount: 4 },
+      { item: "jewel", rarity: 1, amount: 6 },
+      { item: "elementalStone", amount: 4 },
       { item: "local", amount: 20 },
       { item: "common", rarity: 1, amount: 12 },
     ],
     [
-      { item: "ascensionGem", rarity: 2, amount: 3 },
-      { item: "ascensionBossItem", amount: 8 },
+      { item: "jewel", rarity: 2, amount: 3 },
+      { item: "elementalStone", amount: 8 },
       { item: "local", amount: 30 },
       { item: "common", rarity: 1, amount: 18 },
     ],
     [
-      { item: "ascensionGem", rarity: 2, amount: 6 },
-      { item: "ascensionBossItem", amount: 12 },
+      { item: "jewel", rarity: 2, amount: 6 },
+      { item: "elementalStone", amount: 12 },
       { item: "local", amount: 45 },
       { item: "common", rarity: 2, amount: 12 },
     ],
     [
-      { item: "ascensionGem", rarity: 3, amount: 6 },
-      { item: "ascensionBossItem", amount: 20 },
+      { item: "jewel", rarity: 3, amount: 6 },
+      { item: "elementalStone", amount: 20 },
       { item: "local", amount: 60 },
       { item: "common", rarity: 2, amount: 24 },
     ],
@@ -74,27 +74,27 @@ export default function CharacterAscensionTab({ character }) {
           <div className="flex items-center">
             <div className="item-image relative">
               <Image
-                src={`/assets/items/gems/${character.ascensionGem.gems[3].image}`}
-                alt={character.ascensionGem.name}
+                src={`/assets/items/gems/${character.jewel.items[3].image}.webp`}
+                alt={character.jewel.name}
                 layout="fill"
                 objectFit="cover"
               />
             </div>
             <div className="mx-2">
-              <span>{character.ascensionGem.name}</span>
+              <span>{character.jewel.name}</span>
             </div>
           </div>
           <div className="flex items-center">
             <div className="item-image relative">
               <Image
-                src={`/assets/items/ascension/boss/${character.ascensionBossItem.image}`}
-                alt={character.ascensionBossItem.name}
+                src={`/assets/items/ascension/boss/${character.elementalStone.image}.webp`}
+                alt={character.elementalStone.name}
                 layout="fill"
                 objectFit="cover"
               />
             </div>
             <div className="mx-2">
-              <span>{character.ascensionBossItem.boss}</span>
+              <span>{character.elementalStone.boss}</span>
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function CharacterAscensionTab({ character }) {
                 <div className="flex justify-center">
                   <div className="mora-image relative">
                     <Image
-                      src="/assets/items/currency/mora.png"
+                      src="/assets/items/currency/mora.webp"
                       alt="mora"
                       width={60}
                       height={60}
