@@ -9,11 +9,11 @@ export default function Abyss() {
         <title>Spiral Abyss - Genshin Database</title>
         <meta
           name="description"
-          content="Genshin Impact Spiral Abyss 2.1 details and recommendations."
+          content="Genshin Impact Spiral Abyss 2.3 infographics with details and recommendations. Contains infographics of all enemies and provides recommendations for elements and techniques for completing"
         />
         <meta
           name="keywords"
-          content="Genshin Impact, Genshin, Spiral Abyss, Abyss, 2.1 Abyss, Database"
+          content="Genshin Impact, Genshin, Spiral Abyss, Abyss, 2.3 Abyss, Database, Infographic"
         />
         <meta name="author" content="Damon Jensen" />
         <meta
