@@ -9,11 +9,11 @@ export default function Abyss() {
         <title>Spiral Abyss - Genshin Database</title>
         <meta
           name="description"
-          content="Genshin Impact Spiral Abyss 2.3 infographics with details and recommendations. Contains infographics of all enemies and provides recommendations for elements and techniques for completing"
+          content="Genshin Impact Spiral Abyss 2.4 infographics with details and recommendations. Contains infographics of all enemies and provides recommendations for elements and techniques for completing"
         />
         <meta
           name="keywords"
-          content="Genshin Impact, Genshin, Spiral Abyss, Abyss, 2.3 Abyss, Database, Infographic"
+          content="Genshin Impact, Genshin, Spiral Abyss, Abyss, 2.4 Abyss, Database, Infographic"
         />
         <meta name="author" content="Damon Jensen" />
         <meta
@@ -29,7 +29,7 @@ export default function Abyss() {
         <div className="flex flex-wrap mt-4">
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/0fme1bqbime71.png?width=1920&format=png&auto=webp&s=d2678c6f66868137674571e8f505f2007b42f504"
+              href="https://i.imgur.com/Md49mdB.png"
               target="_blank"
               rel="noreferrer"
             >
@@ -44,7 +44,7 @@ export default function Abyss() {
           </div>
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/tic1kxacime71.png?width=1920&format=png&auto=webp&s=3579eb940e4c1e7d1a0e0b62ac548a68964d6f27"
+              href="https://i.imgur.com/o8bMjLy.png"
               target="_blank"
               rel="noreferrer"
             >
@@ -60,7 +60,7 @@ export default function Abyss() {
 
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/p6tsf29snt281.png?width=1920&format=png&auto=webp&s=40f2546e479b8cc20f945ebcd83810b635289b79"
+              href="https://i.imgur.com/1GERLF5.png"
               target="_blank"
               rel="noreferrer"
             >
@@ -75,7 +75,7 @@ export default function Abyss() {
           </div>
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/wo2iqz8snt281.png?width=1920&format=png&auto=webp&s=11034082668139fd777e991137b805ecb3317d44"
+              href="https://i.imgur.com/osVSf0N.png"
               target="_blank"
               rel="noreferrer"
             >
