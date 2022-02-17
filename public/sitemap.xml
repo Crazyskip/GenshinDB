@@ -1,428 +1,993 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://genshin.crazyskip.com/</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>1.00</priority>
+	<loc>https://genshin.crazyskip.com/</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/weapons</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.2</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/artifacts</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.2</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/abyss</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/abyss</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.2</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Albedo</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Albedo</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.1</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Aloy</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Aloy</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Amber</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Amber</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Arataki_Itto</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Arataki_Itto</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Ayaka</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Barbara</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Barbara</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Beidou</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Beidou</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Bennett</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Bennett</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Chongyun</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Chongyun</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Diluc</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Diluc</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Diona</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Diona</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Eula</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Eula</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Fischl</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Fischl</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Ganyu</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Ganyu</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Gorou</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Gorou</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Hu_Tao</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Hu_Tao</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Jean</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Jean</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Kaedehara_Kazuha</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Kaeya</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Kaeya</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Kazuha</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Kamisato_Ayaka</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Keqing</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Kamisato_Ayato</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Klee</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Keqing</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Kokomi</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Klee</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Kujou_Sara</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Kujou_Sara</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Lisa</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Lisa</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Mona</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Mona</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Ningguang</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Ningguang</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Noelle</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Noelle</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Qiqi</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Qiqi</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Raiden_Shogun</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Raiden_Shogun</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Razor</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Razor</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Rosaria</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Rosaria</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Sayu</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Sangonomiya_Kokomi</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Shenhe</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Sayu</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Sucrose</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Shenhe</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Tartaglia</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Sucrose</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Thoma</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Tartaglia</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Venti</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Thoma</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Xiangling</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Venti</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Xiao</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Xiangling</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Xingqiu</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Xiao</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Xinyan</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Xingqiu</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Yanfei</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Xinyan</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Yoimiya</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Yae_Miko</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Yun_Jin</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Yanfei</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/characters/Zhongli</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Yoimiya</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/weapons/The_Viridescent_Hunt</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Yun_Jin</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/weapons/Amos'_Bow</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/characters/Zhongli</loc>
+	<lastmod>2022-02-17T02:23:26+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Archaic_Petra</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Elegy_for_the_End</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.1</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Blizzard_Strayer</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Polar_Star</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.1</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Bloodstained_Chivalry</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Skyward_Harp</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.1</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Crimson_Witch_of_Flames</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Thundering_Pulse</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Emblem_of_Severed_Fate</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Everlasting_Moonglow</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Heart_of_Depth</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Lost_Prayer_to_the_Sacred_Winds</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Husk_of_Opulent_Dreams</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Memory_of_Dust</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Lavawalker</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Skyward_Atlas</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Maiden_Beloved</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Redhorn_Stonethresher</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Noblesse_Oblige</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Skyward_Pride</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Ocean-Hued_Clam</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Song_of_Broken_Pines</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Pale_Flame</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/The_Unforged</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Retracing_Bolide</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Calamity_Queller</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Shimenawas_Reminiscence</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Engulfing_Lightning</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Tenacity_of_The_Millelith</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Primordial_Jade_Winged-Spear</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Thundering_Fury</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Skyward_Spine</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Thundersoother</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Staff_of_Homa</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Viridescent_Venerer</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Vortex_Vanquisher</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Berserker</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Aquila_Favonia</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Brave_Heart</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Freedom-Sworn</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Gambler</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Mistsplitter_Reforged</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Instructor</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Primordial_Jade_Cutter</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Martial_Artist</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Skyward_Blade</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Prayers_For_Destiny</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Summit_Shaper</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Prayers_For_Illumination</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Alley_Hunter</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Prayers_For_Wisdom</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Blackcliff_Warbow</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Prayers_to_Springtime</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Compound_Bow</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Resolution_of_Sojourner</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Favonius_Warbow</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Scholar</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Hamayumi</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/The_Exile</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Mitternachts_Waltz</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Tiny_Miracle</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Prototype_Crescent</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Adventurer</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Royal_Bow</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Lucky_Dog</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Rust</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://genshin.crazyskip.com/artifacts/Traveling_Doctor</loc>
-  <lastmod>2021-12-12T03:06:49+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://genshin.crazyskip.com/weapons/Sacrificial_Bow</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/The_Stringless</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/The_Viridescent_Hunt</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Windblume_Ode</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Blackcliff_Agate</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Dodoco_Tales</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Eye_of_Perception</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Favonius_Codex</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Frostbearer</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Hakushin_Ring</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Mappa_Mare</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Oathsworn_Eye</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Prototype_Amber</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Royal_Grimoire</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Sacrificial_Fragments</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Solar_Pearl</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/The_Widsith</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Wine_and_Song</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Akuoumaru</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Blackcliff_Slasher</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Favonius_Greatsword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Katsuragikiri_Nagamasa</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Lithic_Blade</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Luxurious_Sea-Lord</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Prototype_Archaic</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Rainslasher</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Royal_Greatsword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Sacrificial_Greatsword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Serpent_Spine</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Snow-Tombed_Starsilver</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/The_Bell</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Whiteblind</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Blackcliff_Pole</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Crescent_Pike</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Deathmatch</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Dragonspine_Spear</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Favonius_Lance</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Kitain_Cross_Spear</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Lithic_Spear</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Prototype_Starglitter</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Royal_Spear</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/The_Catch</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Amenoma_Kageuchi</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Blackcliff_Longsword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Cinnabar_Spindle</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Favonius_Sword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Festering_Desire</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Iron_Sting</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Prototype_Rancour</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Royal_Longsword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Sacrificial_Sword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/The_Alley_Flash</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/The_Black_Sword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/The_Flute</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Messenger</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Raven_Bow</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Recurve_Bow</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Slingshot</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Emerald_Orb</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Magic_Guide</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Otherworldly_Story</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Thrilling_Tales_of_Dragon_Slayers</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Twin_Nephrite</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Bloodtainted_Greatsword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Debate_Club</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Ferrous_Shadow</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Skyrider_Greatsword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/White_Iron_Greatsword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Black_Tassel</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Halberd</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/White_Tassel</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Cool_Steel</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Fillet_Blade</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Harbinger_of_Dawn</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Skyrider_Sword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Pocket_Grimoire</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Iron_Point</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Silver_Sword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Waster_Greatsword</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/weapons/Dull_Blade</loc>
+	<lastmod>2022-02-17T02:23:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Archaic_Petra</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.1</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Blizzard_Strayer</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Bloodstained_Chivalry</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Crimson_Witch_of_Flames</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Emblem_of_Severed_Fate</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Heart_of_Depth</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Husk_of_Opulent_Dreams</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Lavawalker</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Maiden_Beloved</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Noblesse_Oblige</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Ocean-Hued_Clam</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Pale_Flame</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Retracing_Bolide</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Shimenawas_Reminiscence</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Tenacity_of_The_Millelith</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Thundering_Fury</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Thundersoother</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Viridescent_Venerer</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Berserker</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Brave_Heart</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Gambler</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Instructor</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Martial_Artist</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Prayers_For_Destiny</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Prayers_For_Illumination</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Prayers_For_Wisdom</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Prayers_to_Springtime</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Resolution_of_Sojourner</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Scholar</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/The_Exile</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Tiny_Miracle</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Adventurer</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Lucky_Dog</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://genshin.crazyskip.com/artifacts/Traveling_Doctor</loc>
+	<lastmod>2022-02-17T02:23:32+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 </urlset>
