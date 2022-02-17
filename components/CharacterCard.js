@@ -8,7 +8,7 @@ export default function CharacterCard({ character }) {
         <a>
           <div className="flex">
             <div className="flex flex-col flex-1 px-6 justify-center">
-              <h3 className="crimson-font font-bold text-4xl">
+              <h3 className="crimson-font font-bold text-3xl leading-7 sm:text-4xl">
                 {character.name.toUpperCase()}
               </h3>
               <div className="text-xl">

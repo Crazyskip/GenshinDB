@@ -13,14 +13,6 @@ export default function CharacterBanner({ character }) {
             {character.element.toUpperCase()}
           </span>
         </div>
-        <div className="element-image mt-auto relative">
-          <Image
-            src={`/assets/elements/${character.element.toLowerCase()}.webp`}
-            alt={`Element ${character.element}`}
-            layout="fill"
-            objectFit="cover"
-          />
-        </div>
       </div>
       <div className="character-image relative">
         <Image
