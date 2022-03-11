@@ -7,9 +7,6 @@
 html {
   min-width: 400px;
   background-color: #0c3052;
-  background-image: url("/assets/background.webp");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .crimson-font {
@@ -176,6 +173,13 @@ html {
 }
 
 @media only screen and (min-width: 1024px) {
+  html {
+    background-image: url("/assets/background.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
   .character-card,
   .artifact-card,
   .weapon-card {
