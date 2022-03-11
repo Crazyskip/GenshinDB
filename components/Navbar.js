@@ -27,6 +27,7 @@ export default function Navbar({ page }) {
           </a>
         </Link>
         <button
+          aria-label="Toggle Nav Menu"
           className="inline-flex p-3 hover:text-gray-400 rounded lg:hidden text-gray-50 ml-auto focus:outline-none"
           onClick={handleClick}
         >
