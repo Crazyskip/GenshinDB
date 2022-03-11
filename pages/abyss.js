@@ -36,8 +36,8 @@ export default function Abyss() {
               <Image
                 src="/assets/abyss/floor9.webp"
                 alt="abyss floor 9"
-                width={1500}
-                height={850}
+                width={1280}
+                height={720}
                 layout="responsive"
               />
             </a>
@@ -51,8 +51,8 @@ export default function Abyss() {
               <Image
                 src="/assets/abyss/floor10.webp"
                 alt="abyss floor 10"
-                width={1500}
-                height={850}
+                width={1280}
+                height={720}
                 layout="responsive"
               />
             </a>
@@ -60,30 +60,30 @@ export default function Abyss() {
 
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://i.imgur.com/1GERLF5.png"
+              href="https://preview.redd.it/uhgfqq72ipk81.png?width=1920&format=png&auto=webp&s=be1275409cc4ee3d2058aaf8bacb467a4124c38a"
               target="_blank"
               rel="noreferrer"
             >
               <Image
                 src="/assets/abyss/floor11.webp"
                 alt="abyss floor 11"
-                width={1500}
-                height={850}
+                width={1280}
+                height={720}
                 layout="responsive"
               />
             </a>
           </div>
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://i.imgur.com/osVSf0N.png"
+              href="https://preview.redd.it/x9714u72ipk81.png?width=1920&format=png&auto=webp&s=be232f1603ea55b4a6fddc670d99d831be3c97c3"
               target="_blank"
               rel="noreferrer"
             >
               <Image
                 src="/assets/abyss/floor12.webp"
                 alt="abyss floor 12"
-                width={1500}
-                height={850}
+                width={1280}
+                height={720}
                 layout="responsive"
               />
             </a>
