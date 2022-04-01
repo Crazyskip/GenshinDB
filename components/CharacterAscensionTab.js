@@ -1,5 +1,10 @@
 import Image from "next/image"
 import dynamic from "next/dynamic"
+import {
+  ascensionItemTemplate,
+  ascensionLevelTemplate,
+  ascensionMoraTemplate,
+} from "../lib/materialTemplates"
 
 const ReactTooltip = dynamic(() => import("react-tooltip"), {
   ssr: false,
@@ -21,55 +26,6 @@ export default function CharacterAscensionTab({ character }) {
       }.webp`
     }
   }
-
-  const levelTemplate = ["20", "40", "50", "60", "70", "80"]
-
-  const itemsTemplate = [
-    [
-      { item: "jewel", rarity: 0, amount: 1 },
-      { item: "local", amount: 3 },
-      { item: "common", rarity: 0, amount: 3 },
-    ],
-    [
-      { item: "jewel", rarity: 1, amount: 3 },
-      { item: "elementalStone", amount: 2 },
-      { item: "local", amount: 10 },
-      { item: "common", rarity: 0, amount: 15 },
-    ],
-    [
-      { item: "jewel", rarity: 1, amount: 6 },
-      { item: "elementalStone", amount: 4 },
-      { item: "local", amount: 20 },
-      { item: "common", rarity: 1, amount: 12 },
-    ],
-    [
-      { item: "jewel", rarity: 2, amount: 3 },
-      { item: "elementalStone", amount: 8 },
-      { item: "local", amount: 30 },
-      { item: "common", rarity: 1, amount: 18 },
-    ],
-    [
-      { item: "jewel", rarity: 2, amount: 6 },
-      { item: "elementalStone", amount: 12 },
-      { item: "local", amount: 45 },
-      { item: "common", rarity: 2, amount: 12 },
-    ],
-    [
-      { item: "jewel", rarity: 3, amount: 6 },
-      { item: "elementalStone", amount: 20 },
-      { item: "local", amount: 60 },
-      { item: "common", rarity: 2, amount: 24 },
-    ],
-  ]
-
-  const moraTemplate = [
-    "20,000",
-    "40,000",
-    "60,000",
-    "80,000",
-    "100,000",
-    "120,000",
-  ]
 
   return (
     <div className="character-ascension-tab">
@@ -116,7 +72,7 @@ export default function CharacterAscensionTab({ character }) {
           <div className="w-4/12 sm:w-3/12">Mora Cost</div>
         </div>
 
-        {itemsTemplate.map((template, index) => {
+        {ascensionItemTemplate.map((template, index) => {
           return (
             <div
               key={index}
@@ -127,7 +83,7 @@ export default function CharacterAscensionTab({ character }) {
               }`}
             >
               <div className="w-2/12">
-                <span>Lvl {levelTemplate[index]}+</span>
+                <span>Lvl {ascensionLevelTemplate[index]}+</span>
               </div>
 
               <div className="w-6/12 sm:w-7/12">
@@ -173,7 +129,7 @@ export default function CharacterAscensionTab({ character }) {
                   </div>
                   <div>
                     <span className="ascension-text">
-                      {moraTemplate[index]}
+                      {ascensionMoraTemplate[index]}
                     </span>
                   </div>
                 </div>

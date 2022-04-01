@@ -1,5 +1,9 @@
 import Image from "next/image"
 import dynamic from "next/dynamic"
+import {
+  talentItemsTemplate,
+  talentMoraTemplate,
+} from "../lib/materialTemplates"
 
 const ReactTooltip = dynamic(() => import("react-tooltip"), {
   ssr: false,
@@ -21,62 +25,6 @@ export default function CharacterTalentTab({ character }) {
       return "/assets/items/talents/crown_of_sagehood.webp"
     }
   }
-
-  const itemsTemplate = [
-    [
-      { item: "talentBook", rarity: 0, amount: 3 },
-      { item: "common", rarity: 0, amount: 3 },
-    ],
-    [
-      { item: "talentBook", rarity: 1, amount: 2 },
-      { item: "common", rarity: 1, amount: 3 },
-    ],
-    [
-      { item: "talentBook", rarity: 1, amount: 4 },
-      { item: "common", rarity: 1, amount: 4 },
-    ],
-    [
-      { item: "talentBook", rarity: 1, amount: 6 },
-      { item: "common", rarity: 1, amount: 6 },
-    ],
-    [
-      { item: "talentBook", rarity: 1, amount: 9 },
-      { item: "common", rarity: 1, amount: 9 },
-    ],
-    [
-      { item: "talentBook", rarity: 2, amount: 4 },
-      { item: "common", rarity: 2, amount: 4 },
-      { item: "bossItem", amount: 1 },
-    ],
-    [
-      { item: "talentBook", rarity: 2, amount: 6 },
-      { item: "common", rarity: 2, amount: 6 },
-      { item: "bossItem", amount: 1 },
-    ],
-    [
-      { item: "talentBook", rarity: 2, amount: 12 },
-      { item: "common", rarity: 2, amount: 9 },
-      { item: "bossItem", amount: 2 },
-    ],
-    [
-      { item: "talentBook", rarity: 2, amount: 16 },
-      { item: "common", rarity: 2, amount: 12 },
-      { item: "bossItem", amount: 2 },
-      { item: "crown", amount: 1 },
-    ],
-  ]
-
-  const moraTemplate = [
-    "12,500",
-    "17,500",
-    "25,000",
-    "30,000",
-    "35,000",
-    "120,000",
-    "260,000",
-    "450,000",
-    "700,000",
-  ]
 
   return (
     <div className="character-talent-tab">
@@ -123,7 +71,7 @@ export default function CharacterTalentTab({ character }) {
           <div className="w-4/12 sm:w-3/12">Mora Cost</div>
         </div>
 
-        {itemsTemplate.map((template, index) => {
+        {talentItemsTemplate.map((template, index) => {
           return (
             <div
               key={index}
@@ -177,7 +125,9 @@ export default function CharacterTalentTab({ character }) {
                     />
                   </div>
                   <div>
-                    <span className="talent-text">{moraTemplate[index]}</span>
+                    <span className="talent-text">
+                      {talentMoraTemplate[index]}
+                    </span>
                   </div>
                 </div>
               </div>
