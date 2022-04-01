@@ -38,7 +38,9 @@ export default function Character({ characterData }) {
     return (
       <Tab
         style={{
-          color: `${selectedIndex === index ? "rgba(249, 250, 251, 1)" : ""}`,
+          color: `${
+            selectedIndex === index ? "rgba(249, 250, 251, 1)" : "inherit"
+          }`,
         }}
         {...props}
       />

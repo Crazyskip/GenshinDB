@@ -1,4 +1,9 @@
 import Image from "next/image"
+import dynamic from "next/dynamic"
+
+const ReactTooltip = dynamic(() => import("react-tooltip"), {
+  ssr: false,
+})
 
 export default function CharacterAscensionTab({ character }) {
   function getImage(itemRow) {
@@ -74,6 +79,8 @@ export default function CharacterAscensionTab({ character }) {
           <div className="flex items-center">
             <div className="item-image relative">
               <Image
+                data-tip={JSON.stringify({ item: "jewel", rarity: 3 })}
+                data-for="ascensionItem"
                 src={`/assets/items/gems/${character.jewel.items[3].image}.webp`}
                 alt={character.jewel.name}
                 layout="fill"
@@ -87,6 +94,8 @@ export default function CharacterAscensionTab({ character }) {
           <div className="flex items-center">
             <div className="item-image relative">
               <Image
+                data-tip={JSON.stringify({ item: "elementalStone" })}
+                data-for="ascensionItem"
                 src={`/assets/items/ascension/boss/${character.elementalStone.image}.webp`}
                 alt={character.elementalStone.name}
                 layout="fill"
@@ -131,6 +140,8 @@ export default function CharacterAscensionTab({ character }) {
                       >
                         <div className="item-image relative">
                           <Image
+                            data-tip={JSON.stringify(rowItem)}
+                            data-for="ascensionItem"
                             src={getImage(rowItem)}
                             alt={"talent material"}
                             width={60}
@@ -171,6 +182,24 @@ export default function CharacterAscensionTab({ character }) {
           )
         })}
       </div>
+      <ReactTooltip
+        id="ascensionItem"
+        type="dark"
+        effect="solid"
+        getContent={(rowItemString) => {
+          const rowItem = JSON.parse(rowItemString)
+          if (!rowItem) return ""
+          if (rowItem.item === "jewel") {
+            return character.jewel.items[rowItem.rarity].name
+          } else if (rowItem.item === "elementalStone") {
+            return character.elementalStone.name
+          } else if (rowItem.item === "local") {
+            return character.localItem.name
+          } else if (rowItem.item === "common") {
+            return character.commonItem.items[rowItem.rarity].name
+          }
+        }}
+      />
     </div>
   )
 }

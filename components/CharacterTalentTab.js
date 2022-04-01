@@ -1,4 +1,9 @@
 import Image from "next/image"
+import dynamic from "next/dynamic"
+
+const ReactTooltip = dynamic(() => import("react-tooltip"), {
+  ssr: false,
+})
 
 export default function CharacterTalentTab({ character }) {
   function getImage(itemRow) {
@@ -81,6 +86,8 @@ export default function CharacterTalentTab({ character }) {
           <div className="flex items-center">
             <div className="item-image relative">
               <Image
+                data-tip={JSON.stringify({ item: "talentBook", rarity: 0 })}
+                data-for="talentItem"
                 src={`/assets/items/talents/${character.talentBook.items[0].image}.webp`}
                 alt={character.talentBook.items[0].name}
                 layout="fill"
@@ -94,6 +101,8 @@ export default function CharacterTalentTab({ character }) {
           <div className="flex items-center">
             <div className="item-image relative">
               <Image
+                data-tip={JSON.stringify({ item: "bossItem" })}
+                data-for="talentItem"
                 src={`/assets/items/talents/${character.bossItem.image}.webp`}
                 alt={character.bossItem.name}
                 layout="fill"
@@ -138,6 +147,8 @@ export default function CharacterTalentTab({ character }) {
                       >
                         <div className="item-image relative">
                           <Image
+                            data-tip={JSON.stringify(rowItem)}
+                            data-for="talentItem"
                             src={getImage(rowItem)}
                             alt={"talent material"}
                             width={60}
@@ -174,6 +185,24 @@ export default function CharacterTalentTab({ character }) {
           )
         })}
       </div>
+      <ReactTooltip
+        id="talentItem"
+        type="dark"
+        effect="solid"
+        getContent={(rowItemString) => {
+          const rowItem = JSON.parse(rowItemString)
+          if (!rowItem) return ""
+          if (rowItem.item === "talentBook") {
+            return character.talentBook.items[rowItem.rarity].name
+          } else if (rowItem.item === "common") {
+            return character.commonItem.items[rowItem.rarity].name
+          } else if (rowItem.item === "bossItem") {
+            return character.bossItem.name
+          } else if (rowItem.item === "crown") {
+            return "Crown of Sagehood"
+          }
+        }}
+      />
     </div>
   )
 }

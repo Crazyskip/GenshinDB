@@ -20,6 +20,7 @@ export default function CharacterBanner({ character }) {
           alt={`Character ${character.name}`}
           layout="fill"
           objectFit="cover"
+          priority
         />
       </div>
     </div>
