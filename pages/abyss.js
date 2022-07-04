@@ -29,7 +29,7 @@ export default function Abyss() {
         <div className="flex flex-wrap mt-4">
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://i.imgur.com/Md49mdB.png"
+              href="https://preview.redd.it/u75ri8d05w291.png?width=2981&format=png&auto=webp&s=3ec70f4ca2ff6ff07be7c3b4cb75f28b13142388"
               target="_blank"
               rel="noreferrer"
             >
@@ -44,7 +44,7 @@ export default function Abyss() {
           </div>
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://i.imgur.com/o8bMjLy.png"
+              href="https://preview.redd.it/tai5xbd05w291.png?width=2981&format=png&auto=webp&s=08d840d8e715bbf6390ea38cf2c2a12d78dd58ee"
               target="_blank"
               rel="noreferrer"
             >
@@ -60,7 +60,7 @@ export default function Abyss() {
 
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/ilt6qsimjyq81.png?width=2981&format=png&auto=webp&s=19e5afad92913645891bb38ba5ad9b75e21c3d1c"
+              href="https://preview.redd.it/0inthbd05w291.png?width=2981&format=png&auto=webp&s=253a4b6192ba9fe102144209c27ea40cf9c7de73"
               target="_blank"
               rel="noreferrer"
             >
@@ -75,7 +75,7 @@ export default function Abyss() {
           </div>
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/onbqenimjyq81.png?width=2981&format=png&auto=webp&s=017f38676d2463ea5b3f2263af9da06da1ab0c45"
+              href="https://preview.redd.it/qwmtded05w291.png?width=2981&format=png&auto=webp&s=3c2c317b8c6c1f544d9fd766a22885ade881f5ff"
               target="_blank"
               rel="noreferrer"
             >
