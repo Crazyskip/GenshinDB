@@ -1,15 +1,9 @@
 import Head from "next/head"
+import { useState } from "react"
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
+
 import CharacterBanner from "../../components/CharacterBanner"
 import Navbar from "../../components/Navbar"
-import {
-  Tabs,
-  TabList,
-  Tab,
-  TabPanels,
-  TabPanel,
-  useTabsContext,
-} from "@reach/tabs"
-
 import { getCharacter, getAllCharacterNames } from "../../lib/characters"
 import CharacterTalentTab from "../../components/CharacterTalentTab"
 import CharacterAscensionTab from "../../components/CharacterAscensionTab"
@@ -33,19 +27,20 @@ export async function getStaticPaths() {
 }
 
 export default function Character({ characterData }) {
-  function CustomTab({ index, ...props }) {
-    const { selectedIndex, focusedIndex } = useTabsContext()
-    return (
-      <Tab
-        style={{
-          color: `${
-            selectedIndex === index ? "rgba(249, 250, 251, 1)" : "inherit"
-          }`,
-        }}
-        {...props}
-      />
-    )
-  }
+  const [tabIndex, setTabIndex] = useState(0)
+
+  const CustomTab = ({ children, index, ...otherProps }) => (
+    <Tab
+      {...otherProps}
+      className={`py-1 px-6 focus:outline-none cursor-pointer hover:text-gray-50 ${
+        tabIndex === index ? "text-gray-50" : "text-gray-400"
+      }`}
+    >
+      <h1>{children}</h1>
+    </Tab>
+  )
+
+  CustomTab.tabsRole = "Tab"
 
   return (
     <div>
@@ -68,29 +63,22 @@ export default function Character({ characterData }) {
       </Head>
       <Navbar />
       <CharacterBanner character={characterData} />
-      <Tabs className="mt-4 w-full md:w-10/12 lg:w-3/4 mx-auto bg-gray-900 bg-opacity-30 pb-4">
-        <TabList className="bg-gray-900 bg-opacity-90 text-gray-400 text-xl text-center">
-          <CustomTab
-            className="px-6 py-3 hover:text-gray-50 focus:outline-none"
-            index={0}
-          >
-            Talents
-          </CustomTab>
-          <CustomTab
-            className="px-6 py-3 hover:text-gray-50 focus:outline-none"
-            index={1}
-          >
-            Ascension
-          </CustomTab>
+      <Tabs
+        selectedIndex={tabIndex}
+        onSelect={(index) => setTabIndex(index)}
+        className="mt-4 w-full md:w-10/12 lg:w-3/4 mx-auto bg-gray-900 bg-opacity-30 pb-4"
+      >
+        <TabList className="flex justify-center bg-gray-900 bg-opacity-90 text-gray-400 text-xl text-center px-6 py-2">
+          <CustomTab index={0}>Talents</CustomTab>
+          <CustomTab index={1}>Ascension</CustomTab>
         </TabList>
-        <TabPanels>
-          <TabPanel className="focus:outline-none">
-            <CharacterTalentTab character={characterData} />
-          </TabPanel>
-          <TabPanel className="focus:outline-none">
-            <CharacterAscensionTab character={characterData} />
-          </TabPanel>
-        </TabPanels>
+
+        <TabPanel className="focus:outline-none">
+          <CharacterTalentTab character={characterData} />
+        </TabPanel>
+        <TabPanel className="focus:outline-none">
+          <CharacterAscensionTab character={characterData} />
+        </TabPanel>
       </Tabs>
     </div>
   )
