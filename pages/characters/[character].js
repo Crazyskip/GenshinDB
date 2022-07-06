@@ -32,7 +32,7 @@ export default function Character({ characterData }) {
   const CustomTab = ({ children, index, ...otherProps }) => (
     <Tab
       {...otherProps}
-      className={`py-1 px-6 focus:outline-none cursor-pointer hover:text-gray-50 ${
+      className={`py-3 px-6 focus:outline-none cursor-pointer hover:text-gray-50 ${
         tabIndex === index ? "text-gray-50" : "text-gray-400"
       }`}
     >
@@ -68,7 +68,7 @@ export default function Character({ characterData }) {
         onSelect={(index) => setTabIndex(index)}
         className="mt-4 w-full md:w-10/12 lg:w-3/4 mx-auto bg-gray-900 bg-opacity-30 pb-4"
       >
-        <TabList className="flex justify-center bg-gray-900 bg-opacity-90 text-gray-400 text-xl text-center px-6 py-2">
+        <TabList className="flex justify-center bg-gray-900 bg-opacity-90 text-gray-400 text-xl text-center">
           <CustomTab index={0}>Talents</CustomTab>
           <CustomTab index={1}>Ascension</CustomTab>
         </TabList>
