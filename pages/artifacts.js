@@ -1,12 +1,15 @@
 import Head from "next/head"
 import { useState } from "react"
+
 import Navbar from "../components/Navbar"
 import ArtifactCard from "../components/ArtifactCard"
 
-import { getArtifacts } from "../lib/artifacts"
+import { PrismaClient } from "@prisma/client"
 
 export async function getStaticProps() {
-  const artifacts = await getArtifacts()
+  const prisma = new PrismaClient()
+  const artifacts = await prisma.artifacts.findMany()
+
   return {
     props: {
       artifacts,
@@ -59,10 +62,8 @@ export default function Artifacts({ artifacts }) {
         <div className="my-4 flex flex-wrap">
           {artifacts.map((artifact) =>
             artifact.name.toLowerCase().includes(search.toLowerCase()) ? (
-              <ArtifactCard key={artifact._id} artifact={artifact} />
-            ) : (
-              ""
-            )
+              <ArtifactCard key={artifact.id} artifact={artifact} />
+            ) : null
           )}
         </div>
       </div>

@@ -2,11 +2,17 @@ import Head from "next/head"
 import Image from "next/image"
 import Navbar from "../../components/Navbar"
 
-import { getArtifact, getAllArtifactNames } from "../../lib/artifacts"
+import { PrismaClient } from "@prisma/client"
+
 import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar"
 
 export async function getStaticProps({ params }) {
-  const artifact = await getArtifact(params.artifact)
+  const prisma = new PrismaClient()
+  const artifact = await prisma.artifacts.findUnique({
+    where: {
+      name: params.artifact,
+    },
+  })
   return {
     props: { artifact },
     revalidate: 60,
@@ -14,7 +20,17 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const paths = await getAllArtifactNames()
+  const prisma = new PrismaClient()
+  const allArtifactNames = await prisma.artifacts.findMany({
+    select: {
+      name: true,
+    },
+  })
+
+  const paths = allArtifactNames.map(({ name }) => ({
+    params: { artifact: name },
+  }))
+
   return {
     paths,
     fallback: false,
