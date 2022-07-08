@@ -8,7 +8,7 @@ import { PrismaClient } from "@prisma/client"
 
 export async function getStaticProps() {
   const prisma = new PrismaClient()
-  const artifacts = await prisma.artifacts.findMany()
+  const artifacts = await prisma.artifact.findMany()
 
   return {
     props: {

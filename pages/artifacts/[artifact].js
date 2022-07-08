@@ -8,9 +8,9 @@ import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar"
 
 export async function getStaticProps({ params }) {
   const prisma = new PrismaClient()
-  const artifact = await prisma.artifacts.findUnique({
+  const artifact = await prisma.artifact.findUnique({
     where: {
-      name: params.artifact,
+      slug: params.artifact,
     },
   })
   return {
@@ -21,14 +21,14 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const prisma = new PrismaClient()
-  const allArtifactNames = await prisma.artifacts.findMany({
+  const artifactSlugs = await prisma.artifact.findMany({
     select: {
-      name: true,
+      slug: true,
     },
   })
 
-  const paths = allArtifactNames.map(({ name }) => ({
-    params: { artifact: name },
+  const paths = artifactSlugs.map((artifact) => ({
+    params: { artifact: artifact.slug },
   }))
 
   return {
@@ -73,7 +73,7 @@ export default function Artifact({ artifact }) {
         </div>
         <div className="artifact-image relative">
           <Image
-            src={`/assets/artifacts/${artifact.images[0]}.webp`}
+            src={`/assets/artifacts/${artifact.images[0]}`}
             alt={`Artifact ${artifact.name}`}
             layout="fill"
             objectFit="cover"
@@ -91,7 +91,7 @@ export default function Artifact({ artifact }) {
                 return (
                   <Image
                     key={image}
-                    src={`/assets/artifacts/${image}.webp`}
+                    src={`/assets/artifacts/${image}`}
                     alt={`Artifact ${artifact.name}`}
                     height={94}
                     width={94}

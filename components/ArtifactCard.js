@@ -9,7 +9,7 @@ export default function ArtifactCard({ artifact }) {
   }
   return (
     <div className="artifact-card m-1 bg-gray-900 bg-opacity-60 hover:bg-opacity-80">
-      <Link href={`/artifacts/${artifact.name.split(" ").join("_")}`}>
+      <Link href={`/artifacts/${artifact.slug}`}>
         <a>
           <div className="flex">
             <div className="flex flex-col flex-1 px-6 justify-center">
@@ -22,7 +22,7 @@ export default function ArtifactCard({ artifact }) {
             </div>
             <div className="artifact-image relative">
               <Image
-                src={`/assets/artifacts/${artifact.images[0]}.webp`}
+                src={`/assets/artifacts/${artifact.images[0]}`}
                 alt={`Artifact ${artifact.name}`}
                 layout="fill"
                 objectFit="cover"

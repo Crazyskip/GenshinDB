@@ -14,13 +14,13 @@ export default function CharacterTalentTab({ character }) {
     if (itemRow.item === "talentBook") {
       return `/assets/items/talents/${
         character.talentBook.items[itemRow.rarity].image
-      }.webp`
+      }`
     } else if (itemRow.item === "common") {
       return `/assets/items/common/${
         character.commonItem.items[itemRow.rarity].image
-      }.webp`
+      }`
     } else if (itemRow.item === "bossItem") {
-      return `/assets/items/talents/${character.bossItem.image}.webp`
+      return `/assets/items/talents/${character.bossItem.image}`
     } else if (itemRow.item === "crown") {
       return "/assets/items/talents/crown_of_sagehood.webp"
     }
@@ -36,7 +36,7 @@ export default function CharacterTalentTab({ character }) {
               <Image
                 data-tip={JSON.stringify({ item: "talentBook", rarity: 0 })}
                 data-for="talentItem"
-                src={`/assets/items/talents/${character.talentBook.items[0].image}.webp`}
+                src={`/assets/items/talents/${character.talentBook.items[0].image}`}
                 alt={character.talentBook.items[0].name}
                 layout="fill"
                 objectFit="cover"
@@ -51,7 +51,7 @@ export default function CharacterTalentTab({ character }) {
               <Image
                 data-tip={JSON.stringify({ item: "bossItem" })}
                 data-for="talentItem"
-                src={`/assets/items/talents/${character.bossItem.image}.webp`}
+                src={`/assets/items/talents/${character.bossItem.image}`}
                 alt={character.bossItem.name}
                 layout="fill"
                 objectFit="cover"

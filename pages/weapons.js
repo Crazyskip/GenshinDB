@@ -1,12 +1,18 @@
+import { PrismaClient } from "@prisma/client"
 import Head from "next/head"
 import { useState } from "react"
 import Navbar from "../components/Navbar"
 import WeaponCard from "../components/WeaponCard"
 
-import { getWeapons } from "../lib/weapons"
-
 export async function getStaticProps() {
-  const weapons = await getWeapons()
+  const prisma = new PrismaClient()
+  const weapons = await prisma.weapon.findMany({
+    include: {
+      primaryItem: true,
+      secondaryItem: true,
+      commonItem: true,
+    },
+  })
   return {
     props: {
       weapons,
@@ -59,7 +65,7 @@ export default function Weapons({ weapons }) {
         <div className="my-4 flex flex-wrap">
           {weapons.map((weapon) =>
             weapon.name.toLowerCase().includes(search.toLowerCase()) ? (
-              <WeaponCard key={weapon._id} weapon={weapon} />
+              <WeaponCard key={weapon.id} weapon={weapon} />
             ) : (
               ""
             )

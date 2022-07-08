@@ -2,21 +2,28 @@ import Head from "next/head"
 import Image from "next/image"
 import dynamic from "next/dynamic"
 import Navbar from "../../components/Navbar"
-
-const ReactTooltip = dynamic(() => import("react-tooltip"), {
-  ssr: false,
-})
-
-import { getWeapon, getAllWeaponNames } from "../../lib/weapons"
 import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar"
 import {
   weaponItemTemplate,
   weaponLevelTemplate,
   weaponMoraTemplate,
 } from "../../lib/materialTemplates"
+import { PrismaClient } from "@prisma/client"
+
+const ReactTooltip = dynamic(() => import("react-tooltip"), {
+  ssr: false,
+})
 
 export async function getStaticProps({ params }) {
-  const weapon = await getWeapon(params.weapon)
+  const prisma = new PrismaClient()
+  const weapon = await prisma.weapon.findUnique({
+    where: { slug: params.weapon },
+    include: {
+      primaryItem: true,
+      secondaryItem: true,
+      commonItem: true,
+    },
+  })
   return {
     props: { weapon },
     revalidate: 60,
@@ -24,7 +31,16 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const paths = await getAllWeaponNames()
+  const prisma = new PrismaClient()
+  const weaponSlugs = await prisma.weapon.findMany({
+    select: {
+      slug: true,
+    },
+  })
+
+  const paths = weaponSlugs.map((weapon) => ({
+    params: { weapon: weapon.slug },
+  }))
   return {
     paths,
     fallback: false,
@@ -40,16 +56,16 @@ export default function Weapon({ weapon }) {
   function getImage(itemRow) {
     if (itemRow.item === "ascensionItem1") {
       return `/assets/items/ascension/weapon1/${
-        weapon.weaponPrimaryItem.items[itemRow.rarity].image
-      }.webp`
+        weapon.primaryItem.items[itemRow.rarity].image
+      }`
     } else if (itemRow.item === "ascensionItem2") {
       return `/assets/items/ascension/weapon2/${
-        weapon.weaponSecondaryItem.items[itemRow.rarity].image
-      }.webp`
+        weapon.secondaryItem.items[itemRow.rarity].image
+      }`
     } else if (itemRow.item === "common") {
       return `/assets/items/common/${
         weapon.commonItem.items[itemRow.rarity].image
-      }.webp`
+      }`
     }
   }
 
@@ -86,7 +102,7 @@ export default function Weapon({ weapon }) {
           </div>
           <div className="weapon-image relative">
             <Image
-              src={`/assets/weapons/${weapon.image}.webp`}
+              src={`/assets/weapons/${weapon.image}`}
               alt={`Weapon ${weapon.name}`}
               layout="fill"
               objectFit="cover"
@@ -136,14 +152,14 @@ export default function Weapon({ weapon }) {
                     rarity: 0,
                   })}
                   data-for="ascensionItem"
-                  src={`/assets/items/ascension/weapon1/${weapon.weaponPrimaryItem.items[0].image}.webp`}
-                  alt={weapon.weaponPrimaryItem.name}
+                  src={`/assets/items/ascension/weapon1/${weapon.primaryItem.items[0].image}`}
+                  alt={weapon.primaryItem.name}
                   layout="fill"
                   objectFit="cover"
                 />
               </div>
               <div className="mx-2">
-                <span>{weapon.weaponPrimaryItem.days}</span>
+                <span>{weapon.primaryItem.days}</span>
               </div>
             </div>
           </div>
@@ -252,9 +268,9 @@ export default function Weapon({ weapon }) {
           const rowItem = JSON.parse(rowItemString)
           if (!rowItem) return ""
           if (rowItem.item === "ascensionItem1") {
-            return weapon.weaponPrimaryItem.items[rowItem.rarity].name
+            return weapon.primaryItem.items[rowItem.rarity].name
           } else if (rowItem.item === "ascensionItem2") {
-            return weapon.weaponSecondaryItem.items[rowItem.rarity].name
+            return weapon.secondaryItem.items[rowItem.rarity].name
           } else if (rowItem.item === "common") {
             return weapon.commonItem.items[rowItem.rarity].name
           }
