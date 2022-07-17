@@ -106,14 +106,14 @@ export default function Artifact({ artifact }) {
           <div className="text-gray-50 bg-gray-900 bg-opacity-60 p-4 flex flex-col items-center">
             <span className="text-3xl font-semibold pb-1">Set Bonus</span>
             <hr className="artifact-hr mb-4" />
-            {artifact.bonus.map((bonus, index) => {
+            {artifact.bonuses.map((bonus, index) => {
               return (
                 <div key={bonus}>
                   <div className="text-lg xl:text-xl text-center font-semibold leading-none">
                     {(index + 1) * 2} Pieces
                   </div>
                   <div className="text-sm xl:text-base text-center pb-4">
-                    {artifact.bonus[index]}
+                    {bonus}
                   </div>
                 </div>
               )

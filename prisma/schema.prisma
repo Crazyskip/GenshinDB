@@ -61,7 +61,7 @@ model Artifact {
   slug        String    @unique
   stars       Int
   images      String[]
-  bonus       String[]
+  bonuses     String[]
 }
 
 model TalentBook {
