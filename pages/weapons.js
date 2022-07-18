@@ -17,7 +17,7 @@ export async function getStaticProps() {
     props: {
       weapons,
     },
-    revalidate: 60,
+    revalidate: 1,
   }
 }
 

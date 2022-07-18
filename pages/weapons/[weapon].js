@@ -26,7 +26,7 @@ export async function getStaticProps({ params }) {
   })
   return {
     props: { weapon },
-    revalidate: 2,
+    revalidate: 1,
   }
 }
 

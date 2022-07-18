@@ -16,7 +16,7 @@ export async function getStaticProps() {
     props: {
       artifacts,
     },
-    revalidate: 60,
+    revalidate: 1,
   }
 }
 

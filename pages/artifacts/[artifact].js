@@ -15,7 +15,7 @@ export async function getStaticProps({ params }) {
   })
   return {
     props: { artifact },
-    revalidate: 2,
+    revalidate: 1,
   }
 }
 
