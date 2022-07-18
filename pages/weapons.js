@@ -12,6 +12,7 @@ export async function getStaticProps() {
       secondaryItem: true,
       commonItem: true,
     },
+    orderBy: [{ stars: "desc" }, { type: "asc" }, { name: "asc" }],
   })
   return {
     props: {

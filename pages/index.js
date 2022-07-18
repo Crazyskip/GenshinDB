@@ -15,6 +15,7 @@ export async function getStaticProps() {
       jewel: true,
       commonItem: true,
     },
+    orderBy: [{ name: "asc" }],
   })
 
   return {
