@@ -60,7 +60,7 @@ export default function Abyss() {
 
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/0inthbd05w291.png?width=2981&format=png&auto=webp&s=253a4b6192ba9fe102144209c27ea40cf9c7de73"
+              href="https://preview.redd.it/kkayrvb2o7c91.png?width=3230&format=png&auto=webp&s=8d2e7d688333f14eb933bba62791784879665118"
               target="_blank"
               rel="noreferrer"
             >
@@ -75,7 +75,7 @@ export default function Abyss() {
           </div>
           <div className="w-full xl:w-1/2 p-2">
             <a
-              href="https://preview.redd.it/qwmtded05w291.png?width=2981&format=png&auto=webp&s=3c2c317b8c6c1f544d9fd766a22885ade881f5ff"
+              href="https://preview.redd.it/b3ko5erqp7c91.png?width=3230&format=png&auto=webp&s=ee66ee7985f154b8e0d69afe7279f5db43184d18"
               target="_blank"
               rel="noreferrer"
             >
