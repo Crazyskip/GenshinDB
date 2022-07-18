@@ -26,7 +26,7 @@ export async function getStaticProps({ params }) {
   })
   return {
     props: { weapon },
-    revalidate: 60,
+    revalidate: 2,
   }
 }
 
@@ -43,7 +43,7 @@ export async function getStaticPaths() {
   }))
   return {
     paths,
-    fallback: false,
+    fallback: "blocking",
   }
 }
 

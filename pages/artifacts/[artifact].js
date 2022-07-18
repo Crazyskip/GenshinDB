@@ -15,7 +15,7 @@ export async function getStaticProps({ params }) {
   })
   return {
     props: { artifact },
-    revalidate: 60,
+    revalidate: 2,
   }
 }
 
@@ -33,7 +33,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: false,
+    fallback: "blocking",
   }
 }
 

@@ -21,7 +21,7 @@ export async function getStaticProps() {
     props: {
       characters,
     },
-    revalidate: 60,
+    revalidate: 1,
   }
 }
 
