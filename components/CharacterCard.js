@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function CharacterCard({ character }) {
   return (
     <div className="character-card m-1 bg-gray-900 bg-opacity-60 hover:bg-opacity-80">
-      <Link href={`/characters/${character.name.split(" ").join("_")}`}>
+      <Link href={`/characters/${character.slug}`}>
         <a>
           <div className="flex">
             <div className="flex flex-col flex-1 px-6 justify-center">
@@ -20,7 +20,7 @@ export default function CharacterCard({ character }) {
             </div>
             <div className="character-image relative">
               <Image
-                src={`/assets/characters/${character.image}.webp`}
+                src={`/assets/characters/${character.image}`}
                 alt={`Character ${character.name}`}
                 layout="fill"
                 objectFit="cover"

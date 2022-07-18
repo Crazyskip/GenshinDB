@@ -13,17 +13,15 @@ const ReactTooltip = dynamic(() => import("react-tooltip"), {
 export default function CharacterAscensionTab({ character }) {
   function getImage(itemRow) {
     if (itemRow.item === "jewel") {
-      return `/assets/items/gems/${
-        character.jewel.items[itemRow.rarity].image
-      }.webp`
+      return `/assets/items/gems/${character.jewel.items[itemRow.rarity].image}`
     } else if (itemRow.item === "elementalStone") {
-      return `/assets/items/ascension/boss/${character.elementalStone.image}.webp`
+      return `/assets/items/ascension/boss/${character.elementalStone.image}`
     } else if (itemRow.item === "local") {
-      return `/assets/items/ascension/character/${character.localItem.image}.webp`
+      return `/assets/items/ascension/character/${character.localItem.image}`
     } else if (itemRow.item === "common") {
       return `/assets/items/common/${
         character.commonItem.items[itemRow.rarity].image
-      }.webp`
+      }`
     }
   }
 
@@ -37,7 +35,7 @@ export default function CharacterAscensionTab({ character }) {
               <Image
                 data-tip={JSON.stringify({ item: "jewel", rarity: 3 })}
                 data-for="ascensionItem"
-                src={`/assets/items/gems/${character.jewel.items[3].image}.webp`}
+                src={`/assets/items/gems/${character.jewel.items[3].image}`}
                 alt={character.jewel.name}
                 layout="fill"
                 objectFit="cover"
@@ -52,7 +50,7 @@ export default function CharacterAscensionTab({ character }) {
               <Image
                 data-tip={JSON.stringify({ item: "elementalStone" })}
                 data-for="ascensionItem"
-                src={`/assets/items/ascension/boss/${character.elementalStone.image}.webp`}
+                src={`/assets/items/ascension/boss/${character.elementalStone.image}`}
                 alt={character.elementalStone.name}
                 layout="fill"
                 objectFit="cover"

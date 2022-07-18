@@ -1,0 +1,134 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+type Item {
+  name    String
+  image   String
+  stars   Int
+}
+
+model Character {
+  id                String    @id @default(auto()) @map("_id") @db.ObjectId
+  name              String
+  slug              String    @unique
+  image             String
+  stars             Int
+  element           String
+  weapon            String
+  talentBook        TalentBook @relation(fields: [talentBookId], references: [id])
+  talentBookId      String
+  elementalStone    ElementalStone @relation(fields: [elementalStoneId], references: [id])
+  elementalStoneId  String
+  localItem         LocalItem @relation(fields: [localItemId], references: [id])
+  localItemId       String
+  bossItem          BossItem @relation(fields: [bossItemId], references: [id])
+  bossItemId        String
+  jewel             Jewel @relation(fields: [jewelId], references: [id])
+  jewelId           String
+  commonItem        CommonItem @relation(fields: [commonItemId], references: [id])
+  commonItemId      String
+}
+
+model Weapon {
+  id                      String    @id @default(auto()) @map("_id") @db.ObjectId
+  name                    String
+  slug                    String    @unique
+  image                   String
+  stars                   Int
+  type                    String
+  location                String
+  atk                     Int
+  secondaryStat           String
+  secondaryStatValue      Float
+  refinements             String[]
+  primaryItem             WeaponPrimaryItem @relation(fields: [primaryItemId], references: [id])
+  primaryItemId           String
+  secondaryItem           WeaponSecondaryItem @relation(fields: [secondaryItemId], references: [id])
+  secondaryItemId         String
+  commonItem              CommonItem @relation(fields: [commonItemId], references: [id])
+  commonItemId            String
+}
+
+model Artifact {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  slug        String    @unique
+  stars       Int
+  images      String[]
+  bonuses     String[]
+}
+
+model TalentBook {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  slug        String    @unique
+  items       Item[]
+  days        String
+  characters  Character[]
+}
+
+model ElementalStone {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  slug        String    @unique
+  image       String
+  boss        String
+  characters  Character[]
+}
+
+model LocalItem {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  slug        String    @unique
+  image       String
+  characters  Character[]
+}
+
+model BossItem {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  slug        String    @unique
+  image       String
+  boss        String
+  characters  Character[]
+}
+
+model Jewel {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  slug        String    @unique
+  items       Item[]
+  characters  Character[]
+}
+
+model CommonItem {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  slug        String    @unique
+  items       Item[]
+  characters  Character[]
+  weapons     Weapon[]
+}
+
+model WeaponPrimaryItem {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  slug        String    @unique
+  items       Item[]
+  days        String
+  weapons     Weapon[]
+}
+
+model WeaponSecondaryItem {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  slug        String    @unique
+  items       Item[]
+  weapons     Weapon[]
+}

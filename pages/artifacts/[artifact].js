@@ -2,11 +2,17 @@ import Head from "next/head"
 import Image from "next/image"
 import Navbar from "../../components/Navbar"
 
-import { getArtifact, getAllArtifactNames } from "../../lib/artifacts"
+import { PrismaClient } from "@prisma/client"
+
 import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar"
 
 export async function getStaticProps({ params }) {
-  const artifact = await getArtifact(params.artifact)
+  const prisma = new PrismaClient()
+  const artifact = await prisma.artifact.findUnique({
+    where: {
+      slug: params.artifact,
+    },
+  })
   return {
     props: { artifact },
     revalidate: 60,
@@ -14,7 +20,17 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const paths = await getAllArtifactNames()
+  const prisma = new PrismaClient()
+  const artifactSlugs = await prisma.artifact.findMany({
+    select: {
+      slug: true,
+    },
+  })
+
+  const paths = artifactSlugs.map((artifact) => ({
+    params: { artifact: artifact.slug },
+  }))
+
   return {
     paths,
     fallback: false,
@@ -57,7 +73,7 @@ export default function Artifact({ artifact }) {
         </div>
         <div className="artifact-image relative">
           <Image
-            src={`/assets/artifacts/${artifact.images[0]}.webp`}
+            src={`/assets/artifacts/${artifact.images[0]}`}
             alt={`Artifact ${artifact.name}`}
             layout="fill"
             objectFit="cover"
@@ -75,7 +91,7 @@ export default function Artifact({ artifact }) {
                 return (
                   <Image
                     key={image}
-                    src={`/assets/artifacts/${image}.webp`}
+                    src={`/assets/artifacts/${image}`}
                     alt={`Artifact ${artifact.name}`}
                     height={94}
                     width={94}
@@ -90,14 +106,14 @@ export default function Artifact({ artifact }) {
           <div className="text-gray-50 bg-gray-900 bg-opacity-60 p-4 flex flex-col items-center">
             <span className="text-3xl font-semibold pb-1">Set Bonus</span>
             <hr className="artifact-hr mb-4" />
-            {artifact.bonus.map((bonus, index) => {
+            {artifact.bonuses.map((bonus, index) => {
               return (
                 <div key={bonus}>
                   <div className="text-lg xl:text-xl text-center font-semibold leading-none">
                     {(index + 1) * 2} Pieces
                   </div>
                   <div className="text-sm xl:text-base text-center pb-4">
-                    {artifact.bonus[index]}
+                    {bonus}
                   </div>
                 </div>
               )

@@ -1,12 +1,22 @@
+import { PrismaClient } from "@prisma/client"
 import Head from "next/head"
 import { useState } from "react"
 import CharacterCard from "../components/CharacterCard"
 import Navbar from "../components/Navbar"
 
-import { getCharacters } from "../lib/characters"
-
 export async function getStaticProps() {
-  const characters = await getCharacters()
+  const prisma = new PrismaClient()
+  const characters = await prisma.character.findMany({
+    include: {
+      talentBook: true,
+      elementalStone: true,
+      localItem: true,
+      bossItem: true,
+      jewel: true,
+      commonItem: true,
+    },
+  })
+
   return {
     props: {
       characters,
@@ -59,7 +69,7 @@ export default function Home({ characters }) {
         <div className="my-4 flex flex-wrap">
           {characters.map((character) =>
             character.name.toLowerCase().includes(search.toLowerCase()) ? (
-              <CharacterCard key={character._id} character={character} />
+              <CharacterCard key={character.id} character={character} />
             ) : (
               ""
             )

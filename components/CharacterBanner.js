@@ -16,7 +16,7 @@ export default function CharacterBanner({ character }) {
       </div>
       <div className="character-image relative">
         <Image
-          src={`/assets/characters/${character.image}.webp`}
+          src={`/assets/characters/${character.image}`}
           alt={`Character ${character.name}`}
           layout="fill"
           objectFit="cover"

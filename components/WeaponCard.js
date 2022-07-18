@@ -9,7 +9,7 @@ export default function WeaponCard({ weapon }) {
   }
   return (
     <div className="weapon-card m-1 bg-gray-900 bg-opacity-60 hover:bg-opacity-80">
-      <Link href={`/weapons/${weapon.name.split(" ").join("_")}`}>
+      <Link href={`/weapons/${weapon.slug}`}>
         <a>
           <div className="flex">
             <div className="flex flex-col flex-1 px-6 justify-center">
@@ -22,7 +22,7 @@ export default function WeaponCard({ weapon }) {
             </div>
             <div className="weapon-image relative">
               <Image
-                src={`/assets/weapons/${weapon.image}.webp`}
+                src={`/assets/weapons/${weapon.image}`}
                 alt={`Weapon ${weapon.name}`}
                 layout="fill"
                 objectFit="cover"

@@ -4,29 +4,51 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
 
 import CharacterBanner from "../../components/CharacterBanner"
 import Navbar from "../../components/Navbar"
-import { getCharacter, getAllCharacterNames } from "../../lib/characters"
 import CharacterTalentTab from "../../components/CharacterTalentTab"
 import CharacterAscensionTab from "../../components/CharacterAscensionTab"
+import { PrismaClient } from "@prisma/client"
 
 export async function getStaticProps({ params }) {
-  const characterData = await getCharacter(params.character)
+  const prisma = new PrismaClient()
+  const character = await prisma.character.findUnique({
+    where: { slug: params.character },
+    include: {
+      talentBook: true,
+      elementalStone: true,
+      localItem: true,
+      bossItem: true,
+      jewel: true,
+      commonItem: true,
+    },
+  })
+
   return {
     props: {
-      characterData,
+      character,
     },
     revalidate: 60,
   }
 }
 
 export async function getStaticPaths() {
-  const paths = await getAllCharacterNames()
+  const prisma = new PrismaClient()
+  const characterSlugs = await prisma.character.findMany({
+    select: {
+      slug: true,
+    },
+  })
+
+  const paths = characterSlugs.map((character) => ({
+    params: { character: character.slug },
+  }))
+
   return {
     paths,
     fallback: false,
   }
 }
 
-export default function Character({ characterData }) {
+export default function Character({ character }) {
   const [tabIndex, setTabIndex] = useState(0)
 
   const CustomTab = ({ children, index, ...otherProps }) => (
@@ -45,15 +67,15 @@ export default function Character({ characterData }) {
   return (
     <div>
       <Head>
-        <title>{characterData.name} - Genshin Database</title>
+        <title>{character.name} - Genshin Database</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content={`Genshin Impact character ${characterData.name} ascension and talent requirements`}
+          content={`Genshin Impact character ${character.name} ascension and talent requirements`}
         />
         <meta
           name="keywords"
-          content={`${characterData.name}, character, Genshin Impact, Genshin, database`}
+          content={`${character.name}, character, Genshin Impact, Genshin, database`}
         />
         <meta name="author" content="Damon Jensen" />
         <meta
@@ -62,7 +84,7 @@ export default function Character({ characterData }) {
         />
       </Head>
       <Navbar />
-      <CharacterBanner character={characterData} />
+      <CharacterBanner character={character} />
       <Tabs
         selectedIndex={tabIndex}
         onSelect={(index) => setTabIndex(index)}
@@ -74,10 +96,10 @@ export default function Character({ characterData }) {
         </TabList>
 
         <TabPanel className="focus:outline-none">
-          <CharacterTalentTab character={characterData} />
+          <CharacterTalentTab character={character} />
         </TabPanel>
         <TabPanel className="focus:outline-none">
-          <CharacterAscensionTab character={characterData} />
+          <CharacterAscensionTab character={character} />
         </TabPanel>
       </Tabs>
     </div>
