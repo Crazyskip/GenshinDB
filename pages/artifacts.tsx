@@ -1,11 +1,12 @@
+import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
+import { Artifact } from "@prisma/client";
 
 import Navbar from "../components/Navbar";
 import ArtifactCard from "../components/ArtifactCard";
 
-import { Artifact, PrismaClient } from "@prisma/client";
-import { GetStaticProps, NextPage } from "next";
+import { prisma } from "../util/db";
 
 type Props = {
   artifacts: Artifact[];
@@ -65,7 +66,6 @@ const Artifacts: NextPage<Props> = ({ artifacts }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const artifacts = await prisma.artifact.findMany({
     orderBy: [{ stars: "desc" }, { name: "asc" }],
   });

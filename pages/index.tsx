@@ -1,9 +1,11 @@
-import { Character, PrismaClient } from "@prisma/client";
+import { Character } from "@prisma/client";
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import CharacterCard from "../components/CharacterCard";
 import Navbar from "../components/Navbar";
+
+import { prisma } from "../util/db";
 
 type Props = {
   characters: Character[];
@@ -66,7 +68,6 @@ const Characters: NextPage<Props> = ({ characters }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const characters = await prisma.character.findMany({
     orderBy: [{ name: "asc" }],
   });

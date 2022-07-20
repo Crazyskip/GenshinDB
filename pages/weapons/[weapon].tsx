@@ -3,10 +3,11 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import Navbar from "../../components/Navbar";
 import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar";
-import { PrismaClient } from "@prisma/client";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { WeaponWithItems } from "../../common/types";
 import WeaponAscensionTable from "../../components/WeaponAscensionTable";
+
+import { prisma } from "../../util/db";
 
 const ReactTooltip = dynamic(() => import("react-tooltip"), {
   ssr: false,
@@ -17,6 +18,10 @@ type PageProps = {
 };
 
 const WeaponPage: NextPage<PageProps> = ({ weapon }) => {
+  const title = `${weapon.name} - Genshin Database`;
+  const description = `Genshin Impact weapon ${weapon.name} ascension requirements and refinement details`;
+  const keywords = `${weapon.name}, weapon, Genshin Impact, Genshin, database`;
+
   const stars = [];
   for (let i = 0; i < weapon.stars; i++) {
     stars.push(<AiFillStar className="pr-1" />);
@@ -25,15 +30,9 @@ const WeaponPage: NextPage<PageProps> = ({ weapon }) => {
   return (
     <div className="weapon">
       <Head>
-        <title>{weapon.name} - Genshin Database</title>
-        <meta
-          name="description"
-          content={`Genshin Impact weapon ${weapon.name} ascension requirements and refinement details`}
-        />
-        <meta
-          name="keywords"
-          content={`${weapon.name}, weapon, Genshin Impact, Genshin, database`}
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
         <meta name="author" content="Crazyskip" />
         <meta
           name="viewport"
@@ -138,7 +137,6 @@ const WeaponPage: NextPage<PageProps> = ({ weapon }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const prisma = new PrismaClient();
   const weapon = await prisma.weapon.findUnique({
     where: { slug: context.params?.weapon as string },
     include: {
@@ -154,7 +152,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const prisma = new PrismaClient();
   const weaponSlugs = await prisma.weapon.findMany({
     select: {
       slug: true,

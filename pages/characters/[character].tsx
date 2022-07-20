@@ -6,15 +6,20 @@ import CharacterBanner from "../../components/CharacterBanner";
 import Navbar from "../../components/Navbar";
 import CharacterTalentTab from "../../components/CharacterTalentTab";
 import CharacterAscensionTab from "../../components/CharacterAscensionTab";
-import { PrismaClient } from "@prisma/client";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { CharacterWithItems } from "../../common/types";
+
+import { prisma } from "../../util/db";
 
 type PageProps = {
   character: CharacterWithItems;
 };
 
 const CharacterPage: NextPage<PageProps> = ({ character }) => {
+  const title = `${character.name} - Genshin Database`;
+  const description = `Genshin Impact character ${character.name} ascension and talent requirements`;
+  const keywords = `${character.name}, character, Genshin Impact, Genshin, database`;
+
   const [tabIndex, setTabIndex] = useState(0);
   const tabs = [
     { title: "Talents", panel: <CharacterTalentTab character={character} /> },
@@ -27,16 +32,10 @@ const CharacterPage: NextPage<PageProps> = ({ character }) => {
   return (
     <div>
       <Head>
-        <title>{character.name} - Genshin Database</title>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content={`Genshin Impact character ${character.name} ascension and talent requirements`}
-        />
-        <meta
-          name="keywords"
-          content={`${character.name}, character, Genshin Impact, Genshin, database`}
-        />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
         <meta name="author" content="Crazyskip" />
         <meta
           name="viewport"
@@ -74,7 +73,6 @@ const CharacterPage: NextPage<PageProps> = ({ character }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const prisma = new PrismaClient();
   const character = await prisma.character.findUnique({
     where: { slug: context.params?.character as string },
     include: {
@@ -96,7 +94,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const prisma = new PrismaClient();
   const characterSlugs = await prisma.character.findMany({
     select: {
       slug: true,

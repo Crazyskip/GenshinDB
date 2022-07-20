@@ -1,9 +1,11 @@
-import { PrismaClient, Weapon } from "@prisma/client";
+import { Weapon } from "@prisma/client";
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import WeaponCard from "../components/WeaponCard";
+
+import { prisma } from "../util/db";
 
 type Props = {
   weapons: Weapon[];
@@ -65,7 +67,6 @@ const Weapons: NextPage<Props> = ({ weapons }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prisma = new PrismaClient();
   const weapons = await prisma.weapon.findMany({
     orderBy: [{ stars: "desc" }, { type: "asc" }, { name: "asc" }],
   });

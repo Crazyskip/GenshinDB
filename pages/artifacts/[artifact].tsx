@@ -2,14 +2,20 @@ import Head from "next/head";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
-import { Artifact, PrismaClient } from "@prisma/client";
+import { Artifact } from "@prisma/client";
 import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar";
+
+import { prisma } from "../../util/db";
 
 type Props = {
   artifact: Artifact;
 };
 
 const ArtifactPage: NextPage<Props> = ({ artifact }) => {
+  const title = `${artifact.name} - Genshin Database`;
+  const description = `Genshin Impact artifact set ${artifact.name} details and bonuses`;
+  const keywords = `${artifact.name}, Artifact, Genshin Impact, Genshin,database`;
+
   const stars = [];
   for (let i = 0; i < artifact.stars; i++) {
     stars.push(<AiFillStar key={artifact.name + i} className="pr-1" />);
@@ -18,15 +24,9 @@ const ArtifactPage: NextPage<Props> = ({ artifact }) => {
   return (
     <div className="artifact">
       <Head>
-        <title>{artifact.name} - Genshin Database</title>
-        <meta
-          name="description"
-          content={`Genshin Impact artifact set ${artifact.name} details and bonuses`}
-        />
-        <meta
-          name="keywords"
-          content={`${artifact.name}, Artifact, Genshin Impact, Genshin,database`}
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
         <meta name="author" content="Crazyskip" />
         <meta
           name="viewport"
@@ -98,7 +98,6 @@ const ArtifactPage: NextPage<Props> = ({ artifact }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const prisma = new PrismaClient();
   const artifact = await prisma.artifact.findUnique({
     where: {
       slug: context.params?.artifact as string,
@@ -111,7 +110,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const prisma = new PrismaClient();
   const artifactSlugs = await prisma.artifact.findMany({
     select: {
       slug: true,
