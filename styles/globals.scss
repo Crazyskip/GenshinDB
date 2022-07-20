@@ -32,6 +32,11 @@ html {
   background: #646464;
 }
 
+.mora-image {
+  width: 60px;
+  height: 60px;
+}
+
 .characters,
 .weapons,
 .artifacts,
@@ -66,10 +71,6 @@ html {
   .talent-text {
     line-height: 60px;
   }
-  .mora-image {
-    width: 60px;
-    height: 60px;
-  }
 }
 
 .character-ascension-tab {
@@ -79,10 +80,6 @@ html {
   }
   .ascension-text {
     line-height: 60px;
-  }
-  .mora-image {
-    width: 60px;
-    height: 60px;
   }
 }
 
