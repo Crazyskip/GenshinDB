@@ -1,7 +1,12 @@
-import Image from "next/image"
-import Link from "next/link"
+import { Character } from "@prisma/client";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function CharacterCard({ character }) {
+type Props = {
+  character: Character;
+};
+
+const CharacterCard = ({ character }: Props) => {
   return (
     <div className="character-card m-1 bg-gray-900 bg-opacity-60 hover:bg-opacity-80">
       <Link href={`/characters/${character.slug}`}>
@@ -30,5 +35,7 @@ export default function CharacterCard({ character }) {
         </a>
       </Link>
     </div>
-  )
-}
+  );
+};
+
+export default CharacterCard;

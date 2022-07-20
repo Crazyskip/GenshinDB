@@ -1,28 +1,36 @@
-import Image from "next/image"
-import dynamic from "next/dynamic"
+import Image from "next/image";
+import dynamic from "next/dynamic";
 import {
   ascensionItemTemplate,
   ascensionLevelTemplate,
   ascensionMoraTemplate,
-} from "../lib/materialTemplates"
+} from "../lib/materialTemplates";
+import { CharacterWithItems, ItemTemplate } from "../common/types";
 
 const ReactTooltip = dynamic(() => import("react-tooltip"), {
   ssr: false,
-})
+});
 
-export default function CharacterAscensionTab({ character }) {
-  function getImage(itemRow) {
+type Props = {
+  character: CharacterWithItems;
+};
+
+const CharacterAscensionTab = ({ character }: Props) => {
+  function getImage(itemRow: ItemTemplate) {
     if (itemRow.item === "jewel") {
-      return `/assets/items/gems/${character.jewel.items[itemRow.rarity].image}`
+      return `/assets/items/gems/${
+        character.jewel.items[itemRow.rarity].image
+      }`;
     } else if (itemRow.item === "elementalStone") {
-      return `/assets/items/ascension/boss/${character.elementalStone.image}`
+      return `/assets/items/ascension/boss/${character.elementalStone.image}`;
     } else if (itemRow.item === "local") {
-      return `/assets/items/ascension/character/${character.localItem.image}`
+      return `/assets/items/ascension/character/${character.localItem.image}`;
     } else if (itemRow.item === "common") {
       return `/assets/items/common/${
         character.commonItem.items[itemRow.rarity].image
-      }`
+      }`;
     }
+    return "";
   }
 
   return (
@@ -100,7 +108,7 @@ export default function CharacterAscensionTab({ character }) {
                             alt={"talent material"}
                             width={60}
                             height={60}
-                            objectFit="fixed"
+                            layout="fixed"
                           />
                         </div>
                         <div>
@@ -109,7 +117,7 @@ export default function CharacterAscensionTab({ character }) {
                           </span>
                         </div>
                       </div>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -122,7 +130,7 @@ export default function CharacterAscensionTab({ character }) {
                       alt="mora"
                       width={60}
                       height={60}
-                      objectFit="responsive"
+                      layout="responsive"
                     />
                   </div>
                   <div>
@@ -133,7 +141,7 @@ export default function CharacterAscensionTab({ character }) {
                 </div>
               </div>
             </div>
-          )
+          );
         })}
       </div>
       <ReactTooltip
@@ -141,19 +149,21 @@ export default function CharacterAscensionTab({ character }) {
         type="dark"
         effect="solid"
         getContent={(rowItemString) => {
-          const rowItem = JSON.parse(rowItemString)
-          if (!rowItem) return ""
+          const rowItem = JSON.parse(rowItemString);
+          if (!rowItem) return "";
           if (rowItem.item === "jewel") {
-            return character.jewel.items[rowItem.rarity].name
+            return character.jewel.items[rowItem.rarity].name;
           } else if (rowItem.item === "elementalStone") {
-            return character.elementalStone.name
+            return character.elementalStone.name;
           } else if (rowItem.item === "local") {
-            return character.localItem.name
+            return character.localItem.name;
           } else if (rowItem.item === "common") {
-            return character.commonItem.items[rowItem.rarity].name
+            return character.commonItem.items[rowItem.rarity].name;
           }
         }}
       />
     </div>
-  )
-}
+  );
+};
+
+export default CharacterAscensionTab;

@@ -1,11 +1,16 @@
-import Image from "next/image"
-import Link from "next/link"
-import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar"
+import Image from "next/image";
+import Link from "next/link";
+import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar";
+import { Artifact } from "@prisma/client";
 
-export default function ArtifactCard({ artifact }) {
-  const stars = []
+type Props = {
+  artifact: Artifact;
+};
+
+const ArtifactCard = ({ artifact }: Props) => {
+  const stars = [];
   for (let i = 0; i < artifact.stars; i++) {
-    stars.push(<AiFillStar key={i} className="pr-1" />)
+    stars.push(<AiFillStar key={i} className="pr-1" />);
   }
   return (
     <div className="artifact-card m-1 bg-gray-900 bg-opacity-60 hover:bg-opacity-80">
@@ -32,5 +37,7 @@ export default function ArtifactCard({ artifact }) {
         </a>
       </Link>
     </div>
-  )
-}
+  );
+};
+
+export default ArtifactCard;

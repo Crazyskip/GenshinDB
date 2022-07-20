@@ -1,61 +1,33 @@
-import Head from "next/head"
-import Image from "next/image"
-import Navbar from "../../components/Navbar"
+import Head from "next/head";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import Image from "next/image";
+import Navbar from "../../components/Navbar";
+import { Artifact } from "@prisma/client";
+import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar";
 
-import { PrismaClient } from "@prisma/client"
+import { prisma } from "../../util/db";
 
-import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar"
+type Props = {
+  artifact: Artifact;
+};
 
-export async function getStaticProps({ params }) {
-  const prisma = new PrismaClient()
-  const artifact = await prisma.artifact.findUnique({
-    where: {
-      slug: params.artifact,
-    },
-  })
-  return {
-    props: { artifact },
-    revalidate: 1,
-  }
-}
+const ArtifactPage: NextPage<Props> = ({ artifact }) => {
+  const title = `${artifact.name} - Genshin Database`;
+  const description = `Genshin Impact artifact set ${artifact.name} details and bonuses`;
+  const keywords = `${artifact.name}, Artifact, Genshin Impact, Genshin,database`;
 
-export async function getStaticPaths() {
-  const prisma = new PrismaClient()
-  const artifactSlugs = await prisma.artifact.findMany({
-    select: {
-      slug: true,
-    },
-  })
-
-  const paths = artifactSlugs.map((artifact) => ({
-    params: { artifact: artifact.slug },
-  }))
-
-  return {
-    paths,
-    fallback: "blocking",
-  }
-}
-
-export default function Artifact({ artifact }) {
-  const stars = []
+  const stars = [];
   for (let i = 0; i < artifact.stars; i++) {
-    stars.push(<AiFillStar key={artifact.name + i} className="pr-1" />)
+    stars.push(<AiFillStar key={artifact.name + i} className="pr-1" />);
   }
 
   return (
     <div className="artifact">
       <Head>
-        <title>{artifact.name} - Genshin Database</title>
-        <meta
-          name="description"
-          content={`Genshin Impact artifact set ${artifact.name} details and bonuses`}
-        />
-        <meta
-          name="keywords"
-          content={`${artifact.name}, Artifact, Genshin Impact, Genshin,database`}
-        />
-        <meta name="author" content="Damon Jensen" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="author" content="Crazyskip" />
         <meta
           name="viewport"
           content="initial-scale=0.9, width=device-width, user-scalable=no"
@@ -96,7 +68,7 @@ export default function Artifact({ artifact }) {
                     height={94}
                     width={94}
                   />
-                )
+                );
               })}
             </div>
           </div>
@@ -116,11 +88,42 @@ export default function Artifact({ artifact }) {
                     {bonus}
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const artifact = await prisma.artifact.findUnique({
+    where: {
+      slug: context.params?.artifact as string,
+    },
+  });
+  return {
+    props: { artifact },
+    revalidate: 1,
+  };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const artifactSlugs = await prisma.artifact.findMany({
+    select: {
+      slug: true,
+    },
+  });
+
+  const paths = artifactSlugs.map((artifact) => ({
+    params: { artifact: artifact.slug },
+  }));
+
+  return {
+    paths,
+    fallback: "blocking",
+  };
+};
+
+export default ArtifactPage;

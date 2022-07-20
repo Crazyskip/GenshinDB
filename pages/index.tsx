@@ -1,37 +1,23 @@
-import { PrismaClient } from "@prisma/client"
-import Head from "next/head"
-import { useState } from "react"
-import CharacterCard from "../components/CharacterCard"
-import Navbar from "../components/Navbar"
+import { Character } from "@prisma/client";
+import { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
+import { useState } from "react";
+import CharacterCard from "../components/CharacterCard";
+import Navbar from "../components/Navbar";
 
-export async function getStaticProps() {
-  const prisma = new PrismaClient()
-  const characters = await prisma.character.findMany({
-    include: {
-      talentBook: true,
-      elementalStone: true,
-      localItem: true,
-      bossItem: true,
-      jewel: true,
-      commonItem: true,
-    },
-    orderBy: [{ name: "asc" }],
-  })
+import { prisma } from "../util/db";
 
-  return {
-    props: {
-      characters,
-    },
-    revalidate: 1,
-  }
-}
+type Props = {
+  characters: Character[];
+};
 
-export default function Home({ characters }) {
-  const [search, setSearch] = useState("")
+const Characters: NextPage<Props> = ({ characters }) => {
+  const [search, setSearch] = useState("");
 
-  const handleChange = (e) => {
-    setSearch(e.target.value)
-  }
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  };
+
   return (
     <div>
       <Head>
@@ -45,7 +31,7 @@ export default function Home({ characters }) {
           name="keywords"
           content="Genshin Impact, Genshin, database, characters, character"
         />
-        <meta name="author" content="Damon Jensen" />
+        <meta name="author" content="Crazyskip" />
         <meta
           name="viewport"
           content="initial-scale=0.9, width=device-width, user-scalable=no"
@@ -78,5 +64,20 @@ export default function Home({ characters }) {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const characters = await prisma.character.findMany({
+    orderBy: [{ name: "asc" }],
+  });
+
+  return {
+    props: {
+      characters,
+    },
+    revalidate: 1,
+  };
+};
+
+export default Characters;

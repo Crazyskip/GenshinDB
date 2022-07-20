@@ -1,8 +1,9 @@
-import Head from "next/head"
-import Image from "next/image"
-import Navbar from "../components/Navbar"
+import { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import Navbar from "../components/Navbar";
 
-export default function Abyss() {
+const Abyss: NextPage = () => {
   return (
     <div>
       <Head>
@@ -15,7 +16,7 @@ export default function Abyss() {
           name="keywords"
           content="Genshin Impact, Genshin, Spiral Abyss, Abyss, 2.4 Abyss, Database, Infographic"
         />
-        <meta name="author" content="Damon Jensen" />
+        <meta name="author" content="Crazyskip" />
         <meta
           name="viewport"
           content="initial-scale=0.9, width=device-width, user-scalable=no"
@@ -91,5 +92,7 @@ export default function Abyss() {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default Abyss;

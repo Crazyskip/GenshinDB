@@ -1,20 +1,24 @@
-import Link from "next/link"
-import { useState } from "react"
-import { BiLinkExternal } from "@react-icons/all-files/bi/BiLinkExternal"
+import Link from "next/link";
+import { useState } from "react";
+import { BiLinkExternal } from "@react-icons/all-files/bi/BiLinkExternal";
 
-export default function Navbar({ page }) {
-  const [active, setActive] = useState(false)
+type Props = {
+  page?: string;
+};
+
+const Navbar = ({ page }: Props) => {
+  const [active, setActive] = useState(false);
 
   const handleClick = () => {
-    setActive(!active)
-  }
+    setActive(!active);
+  };
 
   const links = [
     { href: "/", name: "Characters" },
     { href: "/weapons", name: "Weapons" },
     { href: "/artifacts", name: "Artifacts" },
     { href: "/abyss", name: "Spiral Abyss" },
-  ]
+  ];
 
   return (
     <div className="bg-gray-900 bg-opacity-90">
@@ -63,7 +67,7 @@ export default function Navbar({ page }) {
                     {link.name}
                   </a>
                 </Link>
-              )
+              );
             })}
             <a
               className="px-4 py-2 text-gray-400 hover:text-gray-50"
@@ -87,5 +91,7 @@ export default function Navbar({ page }) {
         </div>
       </nav>
     </div>
-  )
-}
+  );
+};
+
+export default Navbar;

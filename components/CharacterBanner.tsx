@@ -1,6 +1,11 @@
-import Image from "next/image"
+import { Character } from "@prisma/client";
+import Image from "next/image";
 
-export default function CharacterBanner({ character }) {
+type Props = {
+  character: Character;
+};
+
+const CharacterBanner = ({ character }: Props) => {
   return (
     <div className="character-banner flex w-full md:w-10/12  lg:w-3/4 mx-auto bg-gray-900 bg-opacity-60">
       <div className="flex flex-col justify-center flex-1 pl-4 py-4 md:py-6 text-gray-50">
@@ -24,5 +29,7 @@ export default function CharacterBanner({ character }) {
         />
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default CharacterBanner;
