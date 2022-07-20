@@ -1,15 +1,15 @@
-import Head from "next/head"
-import { useState } from "react"
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
+import Head from "next/head";
+import { useState } from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
-import CharacterBanner from "../../components/CharacterBanner"
-import Navbar from "../../components/Navbar"
-import CharacterTalentTab from "../../components/CharacterTalentTab"
-import CharacterAscensionTab from "../../components/CharacterAscensionTab"
-import { PrismaClient } from "@prisma/client"
+import CharacterBanner from "../../components/CharacterBanner";
+import Navbar from "../../components/Navbar";
+import CharacterTalentTab from "../../components/CharacterTalentTab";
+import CharacterAscensionTab from "../../components/CharacterAscensionTab";
+import { PrismaClient } from "@prisma/client";
 
 export async function getStaticProps({ params }) {
-  const prisma = new PrismaClient()
+  const prisma = new PrismaClient();
   const character = await prisma.character.findUnique({
     where: { slug: params.character },
     include: {
@@ -20,36 +20,36 @@ export async function getStaticProps({ params }) {
       jewel: true,
       commonItem: true,
     },
-  })
+  });
 
   return {
     props: {
       character,
     },
     revalidate: 1,
-  }
+  };
 }
 
 export async function getStaticPaths() {
-  const prisma = new PrismaClient()
+  const prisma = new PrismaClient();
   const characterSlugs = await prisma.character.findMany({
     select: {
       slug: true,
     },
-  })
+  });
 
   const paths = characterSlugs.map((character) => ({
     params: { character: character.slug },
-  }))
+  }));
 
   return {
     paths,
     fallback: "blocking",
-  }
+  };
 }
 
 export default function Character({ character }) {
-  const [tabIndex, setTabIndex] = useState(0)
+  const [tabIndex, setTabIndex] = useState(0);
 
   const CustomTab = ({ children, index, ...otherProps }) => (
     <Tab
@@ -60,9 +60,9 @@ export default function Character({ character }) {
     >
       <h1>{children}</h1>
     </Tab>
-  )
+  );
 
-  CustomTab.tabsRole = "Tab"
+  CustomTab.tabsRole = "Tab";
 
   return (
     <div>
@@ -77,7 +77,7 @@ export default function Character({ character }) {
           name="keywords"
           content={`${character.name}, character, Genshin Impact, Genshin, database`}
         />
-        <meta name="author" content="Damon Jensen" />
+        <meta name="author" content="Crazyskip" />
         <meta
           name="viewport"
           content="initial-scale=0.9, width=device-width, user-scalable=no"
@@ -103,5 +103,5 @@ export default function Character({ character }) {
         </TabPanel>
       </Tabs>
     </div>
-  )
+  );
 }

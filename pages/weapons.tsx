@@ -1,33 +1,20 @@
-import { PrismaClient } from "@prisma/client"
-import Head from "next/head"
-import { useState } from "react"
-import Navbar from "../components/Navbar"
-import WeaponCard from "../components/WeaponCard"
+import { PrismaClient, Weapon } from "@prisma/client";
+import { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
+import { useState } from "react";
+import Navbar from "../components/Navbar";
+import WeaponCard from "../components/WeaponCard";
 
-export async function getStaticProps() {
-  const prisma = new PrismaClient()
-  const weapons = await prisma.weapon.findMany({
-    include: {
-      primaryItem: true,
-      secondaryItem: true,
-      commonItem: true,
-    },
-    orderBy: [{ stars: "desc" }, { type: "asc" }, { name: "asc" }],
-  })
-  return {
-    props: {
-      weapons,
-    },
-    revalidate: 1,
-  }
-}
+type Props = {
+  weapons: Weapon[];
+};
 
-export default function Weapons({ weapons }) {
-  const [search, setSearch] = useState("")
+const Weapons: NextPage<Props> = ({ weapons }) => {
+  const [search, setSearch] = useState("");
 
-  const handleChange = (e) => {
-    setSearch(e.target.value)
-  }
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  };
   return (
     <div>
       <Head>
@@ -41,7 +28,7 @@ export default function Weapons({ weapons }) {
           name="keywords"
           content="Genshin Impact, Genshin, database, Weapon, Weapons"
         />
-        <meta name="author" content="Damon Jensen" />
+        <meta name="author" content="Crazyskip" />
         <meta
           name="viewport"
           content="initial-scale=0.9, width=device-width, user-scalable=no"
@@ -74,5 +61,25 @@ export default function Weapons({ weapons }) {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prisma = new PrismaClient();
+  const weapons = await prisma.weapon.findMany({
+    include: {
+      primaryItem: true,
+      secondaryItem: true,
+      commonItem: true,
+    },
+    orderBy: [{ stars: "desc" }, { type: "asc" }, { name: "asc" }],
+  });
+  return {
+    props: {
+      weapons,
+    },
+    revalidate: 1,
+  };
+};
+
+export default Weapons;

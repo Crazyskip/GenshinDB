@@ -1,31 +1,22 @@
-import Head from "next/head"
-import { useState } from "react"
+import Head from "next/head";
+import { useState } from "react";
 
-import Navbar from "../components/Navbar"
-import ArtifactCard from "../components/ArtifactCard"
+import Navbar from "../components/Navbar";
+import ArtifactCard from "../components/ArtifactCard";
 
-import { PrismaClient } from "@prisma/client"
+import { Artifact, PrismaClient } from "@prisma/client";
+import { GetStaticProps, NextPage } from "next";
 
-export async function getStaticProps() {
-  const prisma = new PrismaClient()
-  const artifacts = await prisma.artifact.findMany({
-    orderBy: [{ stars: "desc" }, { name: "asc" }],
-  })
+type Props = {
+  artifacts: Artifact[];
+};
 
-  return {
-    props: {
-      artifacts,
-    },
-    revalidate: 1,
-  }
-}
+const Artifacts: NextPage<Props> = ({ artifacts }) => {
+  const [search, setSearch] = useState("");
 
-export default function Artifacts({ artifacts }) {
-  const [search, setSearch] = useState("")
-
-  const handleChange = (e) => {
-    setSearch(e.target.value)
-  }
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  };
 
   return (
     <div>
@@ -39,7 +30,7 @@ export default function Artifacts({ artifacts }) {
           name="keywords"
           content="Genshin Impact, Genshin, database, Artifact, Artifacts, Artifact Set"
         />
-        <meta name="author" content="Damon Jensen" />
+        <meta name="author" content="Crazyskip" />
         <meta
           name="viewport"
           content="initial-scale=0.9, width=device-width, user-scalable=no"
@@ -70,5 +61,21 @@ export default function Artifacts({ artifacts }) {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prisma = new PrismaClient();
+  const artifacts = await prisma.artifact.findMany({
+    orderBy: [{ stars: "desc" }, { name: "asc" }],
+  });
+
+  return {
+    props: {
+      artifacts,
+    },
+    revalidate: 1,
+  };
+};
+
+export default Artifacts;

@@ -1,21 +1,21 @@
-import Head from "next/head"
-import Image from "next/image"
-import dynamic from "next/dynamic"
-import Navbar from "../../components/Navbar"
-import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar"
+import Head from "next/head";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+import Navbar from "../../components/Navbar";
+import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar";
 import {
   weaponItemTemplate,
   weaponLevelTemplate,
   weaponMoraTemplate,
-} from "../../lib/materialTemplates"
-import { PrismaClient } from "@prisma/client"
+} from "../../lib/materialTemplates";
+import { PrismaClient } from "@prisma/client";
 
 const ReactTooltip = dynamic(() => import("react-tooltip"), {
   ssr: false,
-})
+});
 
 export async function getStaticProps({ params }) {
-  const prisma = new PrismaClient()
+  const prisma = new PrismaClient();
   const weapon = await prisma.weapon.findUnique({
     where: { slug: params.weapon },
     include: {
@@ -23,49 +23,49 @@ export async function getStaticProps({ params }) {
       secondaryItem: true,
       commonItem: true,
     },
-  })
+  });
   return {
     props: { weapon },
     revalidate: 1,
-  }
+  };
 }
 
 export async function getStaticPaths() {
-  const prisma = new PrismaClient()
+  const prisma = new PrismaClient();
   const weaponSlugs = await prisma.weapon.findMany({
     select: {
       slug: true,
     },
-  })
+  });
 
   const paths = weaponSlugs.map((weapon) => ({
     params: { weapon: weapon.slug },
-  }))
+  }));
   return {
     paths,
     fallback: "blocking",
-  }
+  };
 }
 
 export default function Weapon({ weapon }) {
-  const stars = []
+  const stars = [];
   for (let i = 0; i < weapon.stars; i++) {
-    stars.push(<AiFillStar className="pr-1" />)
+    stars.push(<AiFillStar className="pr-1" />);
   }
 
   function getImage(itemRow) {
     if (itemRow.item === "ascensionItem1") {
       return `/assets/items/ascension/weapon1/${
         weapon.primaryItem.items[itemRow.rarity].image
-      }`
+      }`;
     } else if (itemRow.item === "ascensionItem2") {
       return `/assets/items/ascension/weapon2/${
         weapon.secondaryItem.items[itemRow.rarity].image
-      }`
+      }`;
     } else if (itemRow.item === "common") {
       return `/assets/items/common/${
         weapon.commonItem.items[itemRow.rarity].image
-      }`
+      }`;
     }
   }
 
@@ -81,7 +81,7 @@ export default function Weapon({ weapon }) {
           name="keywords"
           content={`${weapon.name}, weapon, Genshin Impact, Genshin, database`}
         />
-        <meta name="author" content="Damon Jensen" />
+        <meta name="author" content="Crazyskip" />
         <meta
           name="viewport"
           content="initial-scale=0.9, width=device-width, user-scalable=no"
@@ -211,7 +211,7 @@ export default function Weapon({ weapon }) {
                             </span>
                           </div>
                         </div>
-                      )
+                      );
                     })}
                   </div>
                 </div>
@@ -235,7 +235,7 @@ export default function Weapon({ weapon }) {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
 
@@ -254,7 +254,7 @@ export default function Weapon({ weapon }) {
                       {refinement}
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
@@ -265,17 +265,17 @@ export default function Weapon({ weapon }) {
         type="dark"
         effect="solid"
         getContent={(rowItemString) => {
-          const rowItem = JSON.parse(rowItemString)
-          if (!rowItem) return ""
+          const rowItem = JSON.parse(rowItemString);
+          if (!rowItem) return "";
           if (rowItem.item === "ascensionItem1") {
-            return weapon.primaryItem.items[rowItem.rarity].name
+            return weapon.primaryItem.items[rowItem.rarity].name;
           } else if (rowItem.item === "ascensionItem2") {
-            return weapon.secondaryItem.items[rowItem.rarity].name
+            return weapon.secondaryItem.items[rowItem.rarity].name;
           } else if (rowItem.item === "common") {
-            return weapon.commonItem.items[rowItem.rarity].name
+            return weapon.commonItem.items[rowItem.rarity].name;
           }
         }}
       />
     </div>
-  )
+  );
 }

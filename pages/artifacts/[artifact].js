@@ -1,46 +1,46 @@
-import Head from "next/head"
-import Image from "next/image"
-import Navbar from "../../components/Navbar"
+import Head from "next/head";
+import Image from "next/image";
+import Navbar from "../../components/Navbar";
 
-import { PrismaClient } from "@prisma/client"
+import { PrismaClient } from "@prisma/client";
 
-import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar"
+import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar";
 
 export async function getStaticProps({ params }) {
-  const prisma = new PrismaClient()
+  const prisma = new PrismaClient();
   const artifact = await prisma.artifact.findUnique({
     where: {
       slug: params.artifact,
     },
-  })
+  });
   return {
     props: { artifact },
     revalidate: 1,
-  }
+  };
 }
 
 export async function getStaticPaths() {
-  const prisma = new PrismaClient()
+  const prisma = new PrismaClient();
   const artifactSlugs = await prisma.artifact.findMany({
     select: {
       slug: true,
     },
-  })
+  });
 
   const paths = artifactSlugs.map((artifact) => ({
     params: { artifact: artifact.slug },
-  }))
+  }));
 
   return {
     paths,
     fallback: "blocking",
-  }
+  };
 }
 
 export default function Artifact({ artifact }) {
-  const stars = []
+  const stars = [];
   for (let i = 0; i < artifact.stars; i++) {
-    stars.push(<AiFillStar key={artifact.name + i} className="pr-1" />)
+    stars.push(<AiFillStar key={artifact.name + i} className="pr-1" />);
   }
 
   return (
@@ -55,7 +55,7 @@ export default function Artifact({ artifact }) {
           name="keywords"
           content={`${artifact.name}, Artifact, Genshin Impact, Genshin,database`}
         />
-        <meta name="author" content="Damon Jensen" />
+        <meta name="author" content="Crazyskip" />
         <meta
           name="viewport"
           content="initial-scale=0.9, width=device-width, user-scalable=no"
@@ -96,7 +96,7 @@ export default function Artifact({ artifact }) {
                     height={94}
                     width={94}
                   />
-                )
+                );
               })}
             </div>
           </div>
@@ -116,11 +116,11 @@ export default function Artifact({ artifact }) {
                     {bonus}
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
