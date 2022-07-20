@@ -1,28 +1,28 @@
-import Image from "next/image"
-import dynamic from "next/dynamic"
+import Image from "next/image";
+import dynamic from "next/dynamic";
 import {
   talentItemsTemplate,
   talentMoraTemplate,
-} from "../lib/materialTemplates"
+} from "../lib/materialTemplates";
 
 const ReactTooltip = dynamic(() => import("react-tooltip"), {
   ssr: false,
-})
+});
 
 export default function CharacterTalentTab({ character }) {
   function getImage(itemRow) {
     if (itemRow.item === "talentBook") {
       return `/assets/items/talents/${
         character.talentBook.items[itemRow.rarity].image
-      }`
+      }`;
     } else if (itemRow.item === "common") {
       return `/assets/items/common/${
         character.commonItem.items[itemRow.rarity].image
-      }`
+      }`;
     } else if (itemRow.item === "bossItem") {
-      return `/assets/items/talents/${character.bossItem.image}`
+      return `/assets/items/talents/${character.bossItem.image}`;
     } else if (itemRow.item === "crown") {
-      return "/assets/items/talents/crown_of_sagehood.webp"
+      return "/assets/items/talents/crown_of_sagehood.webp";
     }
   }
 
@@ -108,7 +108,7 @@ export default function CharacterTalentTab({ character }) {
                           <span className="talent-text">x{rowItem.amount}</span>
                         </div>
                       </div>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -132,7 +132,7 @@ export default function CharacterTalentTab({ character }) {
                 </div>
               </div>
             </div>
-          )
+          );
         })}
       </div>
       <ReactTooltip
@@ -140,19 +140,19 @@ export default function CharacterTalentTab({ character }) {
         type="dark"
         effect="solid"
         getContent={(rowItemString) => {
-          const rowItem = JSON.parse(rowItemString)
-          if (!rowItem) return ""
+          const rowItem = JSON.parse(rowItemString);
+          if (!rowItem) return "";
           if (rowItem.item === "talentBook") {
-            return character.talentBook.items[rowItem.rarity].name
+            return character.talentBook.items[rowItem.rarity].name;
           } else if (rowItem.item === "common") {
-            return character.commonItem.items[rowItem.rarity].name
+            return character.commonItem.items[rowItem.rarity].name;
           } else if (rowItem.item === "bossItem") {
-            return character.bossItem.name
+            return character.bossItem.name;
           } else if (rowItem.item === "crown") {
-            return "Crown of Sagehood"
+            return "Crown of Sagehood";
           }
         }}
       />
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function CharacterBanner({ character }) {
   return (
@@ -24,5 +24,5 @@ export default function CharacterBanner({ character }) {
         />
       </div>
     </div>
-  )
+  );
 }

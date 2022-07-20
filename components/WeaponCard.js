@@ -1,11 +1,11 @@
-import Image from "next/image"
-import Link from "next/link"
-import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar"
+import Image from "next/image";
+import Link from "next/link";
+import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar";
 
 export default function WeaponCard({ weapon }) {
-  const stars = []
+  const stars = [];
   for (let i = 0; i < weapon.stars; i++) {
-    stars.push(<AiFillStar key={i} className="pr-1" />)
+    stars.push(<AiFillStar key={i} className="pr-1" />);
   }
   return (
     <div className="weapon-card m-1 bg-gray-900 bg-opacity-60 hover:bg-opacity-80">
@@ -32,5 +32,5 @@ export default function WeaponCard({ weapon }) {
         </a>
       </Link>
     </div>
-  )
+  );
 }

@@ -9,51 +9,24 @@ import {
   weaponMoraTemplate,
 } from "../../lib/materialTemplates";
 import { PrismaClient } from "@prisma/client";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { ItemTemplate, WeaponWithItems } from "../../common/types";
 
 const ReactTooltip = dynamic(() => import("react-tooltip"), {
   ssr: false,
 });
 
-export async function getStaticProps({ params }) {
-  const prisma = new PrismaClient();
-  const weapon = await prisma.weapon.findUnique({
-    where: { slug: params.weapon },
-    include: {
-      primaryItem: true,
-      secondaryItem: true,
-      commonItem: true,
-    },
-  });
-  return {
-    props: { weapon },
-    revalidate: 1,
-  };
-}
+type PageProps = {
+  weapon: WeaponWithItems;
+};
 
-export async function getStaticPaths() {
-  const prisma = new PrismaClient();
-  const weaponSlugs = await prisma.weapon.findMany({
-    select: {
-      slug: true,
-    },
-  });
-
-  const paths = weaponSlugs.map((weapon) => ({
-    params: { weapon: weapon.slug },
-  }));
-  return {
-    paths,
-    fallback: "blocking",
-  };
-}
-
-export default function Weapon({ weapon }) {
+const WeaponPage: NextPage<PageProps> = ({ weapon }) => {
   const stars = [];
   for (let i = 0; i < weapon.stars; i++) {
     stars.push(<AiFillStar className="pr-1" />);
   }
 
-  function getImage(itemRow) {
+  function getImage(itemRow: ItemTemplate) {
     if (itemRow.item === "ascensionItem1") {
       return `/assets/items/ascension/weapon1/${
         weapon.primaryItem.items[itemRow.rarity].image
@@ -67,6 +40,7 @@ export default function Weapon({ weapon }) {
         weapon.commonItem.items[itemRow.rarity].image
       }`;
     }
+    return "";
   }
 
   return (
@@ -87,7 +61,7 @@ export default function Weapon({ weapon }) {
           content="initial-scale=0.9, width=device-width, user-scalable=no"
         />
       </Head>
-      <Navbar />
+      <Navbar page="" />
       <div className="w-full md:w-9/12 mx-auto">
         <div className="flex items-center bg-gray-900 bg-opacity-60 mb-4">
           <div className="flex flex-col justify-center flex-1 pl-4 sm:pl-8  text-gray-50">
@@ -202,7 +176,7 @@ export default function Weapon({ weapon }) {
                               alt={"weapon ascension material"}
                               width={60}
                               height={60}
-                              objectFit="fixed"
+                              layout="fixed"
                             />
                           </div>
                           <div>
@@ -224,7 +198,7 @@ export default function Weapon({ weapon }) {
                         alt="mora"
                         width={60}
                         height={60}
-                        objectFit="responsive"
+                        layout="responsive"
                       />
                     </div>
                     <div>
@@ -278,4 +252,39 @@ export default function Weapon({ weapon }) {
       />
     </div>
   );
-}
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const prisma = new PrismaClient();
+  const weapon = await prisma.weapon.findUnique({
+    where: { slug: context.params?.weapon as string },
+    include: {
+      primaryItem: true,
+      secondaryItem: true,
+      commonItem: true,
+    },
+  });
+  return {
+    props: { weapon },
+    revalidate: 1,
+  };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const prisma = new PrismaClient();
+  const weaponSlugs = await prisma.weapon.findMany({
+    select: {
+      slug: true,
+    },
+  });
+
+  const paths = weaponSlugs.map((weapon) => ({
+    params: { weapon: weapon.slug },
+  }));
+  return {
+    paths,
+    fallback: "blocking",
+  };
+};
+
+export default WeaponPage;

@@ -1,43 +1,15 @@
 import Head from "next/head";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
-
-import { PrismaClient } from "@prisma/client";
-
+import { Artifact, PrismaClient } from "@prisma/client";
 import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar";
 
-export async function getStaticProps({ params }) {
-  const prisma = new PrismaClient();
-  const artifact = await prisma.artifact.findUnique({
-    where: {
-      slug: params.artifact,
-    },
-  });
-  return {
-    props: { artifact },
-    revalidate: 1,
-  };
-}
+type Props = {
+  artifact: Artifact;
+};
 
-export async function getStaticPaths() {
-  const prisma = new PrismaClient();
-  const artifactSlugs = await prisma.artifact.findMany({
-    select: {
-      slug: true,
-    },
-  });
-
-  const paths = artifactSlugs.map((artifact) => ({
-    params: { artifact: artifact.slug },
-  }));
-
-  return {
-    paths,
-    fallback: "blocking",
-  };
-}
-
-export default function Artifact({ artifact }) {
+const ArtifactPage: NextPage<Props> = ({ artifact }) => {
   const stars = [];
   for (let i = 0; i < artifact.stars; i++) {
     stars.push(<AiFillStar key={artifact.name + i} className="pr-1" />);
@@ -61,7 +33,7 @@ export default function Artifact({ artifact }) {
           content="initial-scale=0.9, width=device-width, user-scalable=no"
         />
       </Head>
-      <Navbar />
+      <Navbar page="" />
       <div className="flex items-center w-full md:w-3/4 mx-auto bg-gray-900 bg-opacity-60 mb-4">
         <div className="flex flex-col justify-center flex-1 pl-4 sm:pl-8 py-4 sm:py-6 text-gray-50">
           <h1 className="crimson-font text-3xl sm:text-4xl font-bold">
@@ -123,4 +95,37 @@ export default function Artifact({ artifact }) {
       </div>
     </div>
   );
-}
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const prisma = new PrismaClient();
+  const artifact = await prisma.artifact.findUnique({
+    where: {
+      slug: context.params?.artifact as string,
+    },
+  });
+  return {
+    props: { artifact },
+    revalidate: 1,
+  };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const prisma = new PrismaClient();
+  const artifactSlugs = await prisma.artifact.findMany({
+    select: {
+      slug: true,
+    },
+  });
+
+  const paths = artifactSlugs.map((artifact) => ({
+    params: { artifact: artifact.slug },
+  }));
+
+  return {
+    paths,
+    fallback: "blocking",
+  };
+};
+
+export default ArtifactPage;

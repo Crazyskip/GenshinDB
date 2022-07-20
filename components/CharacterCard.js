@@ -1,5 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 export default function CharacterCard({ character }) {
   return (
@@ -30,5 +30,5 @@ export default function CharacterCard({ character }) {
         </a>
       </Link>
     </div>
-  )
+  );
 }
