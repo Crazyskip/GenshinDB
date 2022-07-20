@@ -33,7 +33,7 @@ const ArtifactPage: NextPage<Props> = ({ artifact }) => {
           content="initial-scale=0.9, width=device-width, user-scalable=no"
         />
       </Head>
-      <Navbar page="" />
+      <Navbar />
       <div className="flex items-center w-full md:w-3/4 mx-auto bg-gray-900 bg-opacity-60 mb-4">
         <div className="flex flex-col justify-center flex-1 pl-4 sm:pl-8 py-4 sm:py-6 text-gray-50">
           <h1 className="crimson-font text-3xl sm:text-4xl font-bold">

@@ -67,11 +67,6 @@ const Weapons: NextPage<Props> = ({ weapons }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const prisma = new PrismaClient();
   const weapons = await prisma.weapon.findMany({
-    include: {
-      primaryItem: true,
-      secondaryItem: true,
-      commonItem: true,
-    },
     orderBy: [{ stars: "desc" }, { type: "asc" }, { name: "asc" }],
   });
   return {

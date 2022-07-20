@@ -1,65 +1,70 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import {
-  ascensionItemTemplate,
-  ascensionLevelTemplate,
-  ascensionMoraTemplate,
+  talentItemsTemplate,
+  talentMoraTemplate,
 } from "../lib/materialTemplates";
+import { CharacterWithItems, ItemTemplate } from "../common/types";
 
 const ReactTooltip = dynamic(() => import("react-tooltip"), {
   ssr: false,
 });
 
-export default function CharacterAscensionTab({ character }) {
-  function getImage(itemRow) {
-    if (itemRow.item === "jewel") {
-      return `/assets/items/gems/${
-        character.jewel.items[itemRow.rarity].image
+type Props = {
+  character: CharacterWithItems;
+};
+
+const CharacterTalentTab = ({ character }: Props) => {
+  function getImage(itemRow: ItemTemplate) {
+    if (itemRow.item === "talentBook") {
+      return `/assets/items/talents/${
+        character.talentBook.items[itemRow.rarity].image
       }`;
-    } else if (itemRow.item === "elementalStone") {
-      return `/assets/items/ascension/boss/${character.elementalStone.image}`;
-    } else if (itemRow.item === "local") {
-      return `/assets/items/ascension/character/${character.localItem.image}`;
     } else if (itemRow.item === "common") {
       return `/assets/items/common/${
         character.commonItem.items[itemRow.rarity].image
       }`;
+    } else if (itemRow.item === "bossItem") {
+      return `/assets/items/talents/${character.bossItem.image}`;
+    } else if (itemRow.item === "crown") {
+      return "/assets/items/talents/crown_of_sagehood.webp";
     }
+    return "";
   }
 
   return (
-    <div className="character-ascension-tab">
+    <div className="character-talent-tab">
       <div className="w-80 mx-auto mt-4 p-4 bg-gray-900 bg-opacity-70 text-gray-50 text-center">
-        <h3 className="text-4xl text-gray-50 mb-1">Ascension</h3>
+        <h3 className="text-4xl text-gray-50 mb-1">Talents</h3>
         <div className="flex flex-col items-center">
           <div className="flex items-center">
             <div className="item-image relative">
               <Image
-                data-tip={JSON.stringify({ item: "jewel", rarity: 3 })}
-                data-for="ascensionItem"
-                src={`/assets/items/gems/${character.jewel.items[3].image}`}
-                alt={character.jewel.name}
+                data-tip={JSON.stringify({ item: "talentBook", rarity: 0 })}
+                data-for="talentItem"
+                src={`/assets/items/talents/${character.talentBook.items[0].image}`}
+                alt={character.talentBook.items[0].name}
                 layout="fill"
                 objectFit="cover"
               />
             </div>
             <div className="mx-2">
-              <span>{character.jewel.name}</span>
+              <span>{character.talentBook.days}</span>
             </div>
           </div>
           <div className="flex items-center">
             <div className="item-image relative">
               <Image
-                data-tip={JSON.stringify({ item: "elementalStone" })}
-                data-for="ascensionItem"
-                src={`/assets/items/ascension/boss/${character.elementalStone.image}`}
-                alt={character.elementalStone.name}
+                data-tip={JSON.stringify({ item: "bossItem" })}
+                data-for="talentItem"
+                src={`/assets/items/talents/${character.bossItem.image}`}
+                alt={character.bossItem.name}
                 layout="fill"
                 objectFit="cover"
               />
             </div>
             <div className="mx-2">
-              <span>{character.elementalStone.boss}</span>
+              <span>{character.bossItem.boss}</span>
             </div>
           </div>
         </div>
@@ -72,7 +77,7 @@ export default function CharacterAscensionTab({ character }) {
           <div className="w-4/12 sm:w-3/12">Mora Cost</div>
         </div>
 
-        {ascensionItemTemplate.map((template, index) => {
+        {talentItemsTemplate.map((template, index) => {
           return (
             <div
               key={index}
@@ -83,7 +88,7 @@ export default function CharacterAscensionTab({ character }) {
               }`}
             >
               <div className="w-2/12">
-                <span>Lvl {ascensionLevelTemplate[index]}+</span>
+                <span>Lvl {index + 2}</span>
               </div>
 
               <div className="w-6/12 sm:w-7/12">
@@ -97,18 +102,16 @@ export default function CharacterAscensionTab({ character }) {
                         <div className="item-image relative">
                           <Image
                             data-tip={JSON.stringify(rowItem)}
-                            data-for="ascensionItem"
+                            data-for="talentItem"
                             src={getImage(rowItem)}
                             alt={"talent material"}
                             width={60}
                             height={60}
-                            objectFit="fixed"
+                            layout="fixed"
                           />
                         </div>
                         <div>
-                          <span className="ascension-text">
-                            x{rowItem.amount}
-                          </span>
+                          <span className="talent-text">x{rowItem.amount}</span>
                         </div>
                       </div>
                     );
@@ -124,12 +127,12 @@ export default function CharacterAscensionTab({ character }) {
                       alt="mora"
                       width={60}
                       height={60}
-                      objectFit="responsive"
+                      layout="responsive"
                     />
                   </div>
                   <div>
-                    <span className="ascension-text">
-                      {ascensionMoraTemplate[index]}
+                    <span className="talent-text">
+                      {talentMoraTemplate[index]}
                     </span>
                   </div>
                 </div>
@@ -139,23 +142,25 @@ export default function CharacterAscensionTab({ character }) {
         })}
       </div>
       <ReactTooltip
-        id="ascensionItem"
+        id="talentItem"
         type="dark"
         effect="solid"
         getContent={(rowItemString) => {
           const rowItem = JSON.parse(rowItemString);
           if (!rowItem) return "";
-          if (rowItem.item === "jewel") {
-            return character.jewel.items[rowItem.rarity].name;
-          } else if (rowItem.item === "elementalStone") {
-            return character.elementalStone.name;
-          } else if (rowItem.item === "local") {
-            return character.localItem.name;
+          if (rowItem.item === "talentBook") {
+            return character.talentBook.items[rowItem.rarity].name;
           } else if (rowItem.item === "common") {
             return character.commonItem.items[rowItem.rarity].name;
+          } else if (rowItem.item === "bossItem") {
+            return character.bossItem.name;
+          } else if (rowItem.item === "crown") {
+            return "Crown of Sagehood";
           }
         }}
       />
     </div>
   );
-}
+};
+
+export default CharacterTalentTab;

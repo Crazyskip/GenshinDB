@@ -2,7 +2,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { BiLinkExternal } from "@react-icons/all-files/bi/BiLinkExternal";
 
-export default function Navbar({ page }) {
+type Props = {
+  page?: string;
+};
+
+const Navbar = ({ page }: Props) => {
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
@@ -88,4 +92,6 @@ export default function Navbar({ page }) {
       </nav>
     </div>
   );
-}
+};
+
+export default Navbar;

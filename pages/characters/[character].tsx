@@ -43,7 +43,7 @@ const CharacterPage: NextPage<PageProps> = ({ character }) => {
           content="initial-scale=0.9, width=device-width, user-scalable=no"
         />
       </Head>
-      <Navbar page="" />
+      <Navbar />
       <CharacterBanner character={character} />
       <Tabs
         selectedIndex={tabIndex}

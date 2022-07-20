@@ -1,8 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar";
+import { Weapon } from "@prisma/client";
 
-export default function WeaponCard({ weapon }) {
+type Props = {
+  weapon: Weapon;
+};
+
+const WeaponCard = ({ weapon }: Props) => {
   const stars = [];
   for (let i = 0; i < weapon.stars; i++) {
     stars.push(<AiFillStar key={i} className="pr-1" />);
@@ -33,4 +38,6 @@ export default function WeaponCard({ weapon }) {
       </Link>
     </div>
   );
-}
+};
+
+export default WeaponCard;

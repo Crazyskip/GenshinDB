@@ -61,7 +61,7 @@ const WeaponPage: NextPage<PageProps> = ({ weapon }) => {
           content="initial-scale=0.9, width=device-width, user-scalable=no"
         />
       </Head>
-      <Navbar page="" />
+      <Navbar />
       <div className="w-full md:w-9/12 mx-auto">
         <div className="flex items-center bg-gray-900 bg-opacity-60 mb-4">
           <div className="flex flex-col justify-center flex-1 pl-4 sm:pl-8  text-gray-50">

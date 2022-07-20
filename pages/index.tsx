@@ -68,14 +68,6 @@ const Characters: NextPage<Props> = ({ characters }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const prisma = new PrismaClient();
   const characters = await prisma.character.findMany({
-    include: {
-      talentBook: true,
-      elementalStone: true,
-      localItem: true,
-      bossItem: true,
-      jewel: true,
-      commonItem: true,
-    },
     orderBy: [{ name: "asc" }],
   });
 
