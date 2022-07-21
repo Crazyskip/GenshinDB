@@ -6,7 +6,8 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start -p 3001",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@prisma/client": "^4.0.0",
@@ -22,6 +23,7 @@
     "@types/node": "^18.0.6",
     "@types/react": "^18.0.15",
     "autoprefixer": "^10.2.6",
+    "cypress": "^10.3.1",
     "eslint": "7.30.0",
     "eslint-config-next": "11.0.1",
     "postcss": "^8.3.5",

@@ -40,9 +40,9 @@ const Characters: NextPage<Props> = ({ characters }) => {
       <Navbar page="Characters" />
       <div className="characters text-gray-50 mx-auto">
         <div className="relative">
-          <h2 className="text-4xl sm:text-5xl text-center font-semibold">
+          <h1 className="text-4xl sm:text-5xl text-center font-semibold">
             Characters
-          </h2>
+          </h1>
           <input
             type="text"
             name="search"
