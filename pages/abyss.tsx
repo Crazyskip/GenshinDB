@@ -24,9 +24,9 @@ const Abyss: NextPage = () => {
       </Head>
       <Navbar page="Spiral Abyss" />
       <div className="abyss mx-auto text-gray-50">
-        <h2 className="text-4xl sm:text-5xl text-center font-semibold">
+        <h1 className="text-4xl sm:text-5xl text-center font-semibold">
           Spiral Abyss
-        </h2>
+        </h1>
         <div className="flex flex-wrap mt-4">
           <div className="w-full xl:w-1/2 p-2">
             <a

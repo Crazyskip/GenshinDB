@@ -39,9 +39,9 @@ const Weapons: NextPage<Props> = ({ weapons }) => {
       <Navbar page="Weapons" />
       <div className="weapons mx-auto text-gray-50">
         <div className="relative">
-          <h2 className="text-4xl sm:text-5xl text-center font-semibold">
+          <h1 className="text-4xl sm:text-5xl text-center font-semibold">
             Weapons
-          </h2>
+          </h1>
           <input
             type="text"
             name="search"

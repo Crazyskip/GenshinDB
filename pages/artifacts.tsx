@@ -40,9 +40,9 @@ const Artifacts: NextPage<Props> = ({ artifacts }) => {
       <Navbar page="Artifacts" />
       <div className="artifacts mx-auto text-gray-50">
         <div className="relative">
-          <h2 className="text-4xl sm:text-5xl text-center font-semibold">
+          <h1 className="text-4xl sm:text-5xl text-center font-semibold">
             Artifacts
-          </h2>
+          </h1>
           <input
             type="text"
             name="search"

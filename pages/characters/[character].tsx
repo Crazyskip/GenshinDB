@@ -57,7 +57,7 @@ const CharacterPage: NextPage<PageProps> = ({ character }) => {
                 tabIndex === i ? "text-gray-50" : "text-gray-400"
               }`}
             >
-              <h1>{tab.title}</h1>
+              <h4>{tab.title}</h4>
             </Tab>
           ))}
         </TabList>
