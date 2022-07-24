@@ -106,9 +106,8 @@ const CharacterAscensionTab = ({ character }: Props) => {
                             data-for="ascensionItem"
                             src={getImage(rowItem)}
                             alt={"talent material"}
-                            width={60}
-                            height={60}
-                            layout="fixed"
+                            layout="fill"
+                            objectFit="cover"
                           />
                         </div>
                         <div>
@@ -128,9 +127,8 @@ const CharacterAscensionTab = ({ character }: Props) => {
                     <Image
                       src="/assets/items/currency/mora.webp"
                       alt="mora"
-                      width={60}
-                      height={60}
-                      layout="responsive"
+                      layout="fill"
+                      objectFit="cover"
                     />
                   </div>
                   <div>

@@ -105,9 +105,8 @@ const CharacterTalentTab = ({ character }: Props) => {
                             data-for="talentItem"
                             src={getImage(rowItem)}
                             alt={"talent material"}
-                            width={60}
-                            height={60}
-                            layout="fixed"
+                            layout="fill"
+                            objectFit="cover"
                           />
                         </div>
                         <div>
@@ -125,9 +124,8 @@ const CharacterTalentTab = ({ character }: Props) => {
                     <Image
                       src="/assets/items/currency/mora.webp"
                       alt="mora"
-                      width={60}
-                      height={60}
-                      layout="responsive"
+                      layout="fill"
+                      objectFit="cover"
                     />
                   </div>
                   <div>

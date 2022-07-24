@@ -89,9 +89,8 @@ const WeaponAscensionTable = ({ weapon }: Props) => {
                             data-for="ascensionItem"
                             src={getImage(rowItem)}
                             alt={"weapon ascension material"}
-                            width={60}
-                            height={60}
-                            layout="fixed"
+                            layout="fill"
+                            objectFit="cover"
                           />
                         </div>
                         <div>
@@ -111,9 +110,8 @@ const WeaponAscensionTable = ({ weapon }: Props) => {
                     <Image
                       src="/assets/items/currency/mora.webp"
                       alt="mora"
-                      width={60}
-                      height={60}
-                      layout="responsive"
+                      layout="fill"
+                      objectFit="cover"
                     />
                   </div>
                   <div>
