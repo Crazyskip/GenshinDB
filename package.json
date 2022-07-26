@@ -13,6 +13,7 @@
     "@prisma/client": "^4.0.0",
     "@react-icons/all-files": "^4.1.0",
     "next": "^12.1.4",
+    "next-pwa": "^5.5.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-tabs": "^5.1.0",
