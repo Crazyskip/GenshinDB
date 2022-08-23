@@ -61,13 +61,14 @@ const ArtifactPage: NextPage<Props> = ({ artifact }) => {
             <div className="flex flex-wrap justify-center">
               {artifact.images.map((image) => {
                 return (
-                  <Image
-                    key={image}
-                    src={`/assets/artifacts/${image}`}
-                    alt={`Artifact ${artifact.name}`}
-                    height={94}
-                    width={94}
-                  />
+                  <div key={image} className="artifact-item-image">
+                    <Image
+                      src={`/assets/artifacts/${image}`}
+                      alt={`Artifact ${artifact.name}`}
+                      height={128}
+                      width={128}
+                    />
+                  </div>
                 );
               })}
             </div>
